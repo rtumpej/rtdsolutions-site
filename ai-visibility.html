@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>Does ChatGPT know your company? AI visibility check | RTD Solutions</title>
-<meta name="description" content="We ask ChatGPT and Perplexity the questions your buyers ask and show you who they name, which sources they rely on and what to fix so they mention you. In any EU language. A 5-question summary is free.">
+<title>Do AI assistants recommend you? AI visibility check | RTD Solutions</title>
+<meta name="description" content="We ask ChatGPT, Gemini, Claude, Perplexity and others the questions your buyers ask and show you who they name, which sources they rely on and what to fix so they mention you. In any EU language. A 5-question summary is free.">
 <link rel="alternate" hreflang="en" href="https://rtdsolutions.si/ai-visibility.html">
 <link rel="alternate" hreflang="sl" href="https://rtdsolutions.si/ai-vidnost.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
@@ -33,6 +33,11 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
 .finding p { margin: 0 0 10px; } .finding p:last-child { margin: 0; }
 .faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
 .bar .lang { margin-left: auto; }
+.ais { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 4px 0 18px; }
+.ais li { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 4px 12px; font-weight: 600; font-size: 15px; color: var(--ink); }
+.steps { margin: 18px 0 0; padding-left: 22px; max-width: 60ch; } .steps li { margin: 0 0 8px; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+.send-status { font-size: 15px; margin: 10px 0 0; } .send-ok { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -40,7 +45,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   "@type": "Service",
   "name": "Seen by AI: AI visibility check",
   "serviceType": "AI assistant visibility audit and fixes (generative engine optimisation)",
-  "description": "What ChatGPT and Perplexity answer to your buyers' questions, who they name, which sources they rely on, and a fix list. In any EU language.",
+  "description": "What ChatGPT, Claude, Gemini and Perplexity answer to your buyers' questions, who they name, which sources they rely on, and a fix list. In any EU language.",
   "url": "https://rtdsolutions.si/ai-visibility.html",
   "areaServed": {"@type": "Place", "name": "European Union"},
   "availableLanguage": ["en", "sl", "nl", "de", "hr", "it", "fr"],
@@ -82,10 +87,18 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow">Seen by AI · a check for companies</p>
-      <h1>Does ChatGPT know your company?</h1>
-      <p class="lead">More and more buyers ask ChatGPT or Perplexity first and Google second. We ask both
-        assistants the questions your buyers ask and show you who they name, which sources they rely on and whether
-        they mention you. In any EU language. A 5-question summary is free.</p>
+      <h1>Do AI assistants recommend you?</h1>
+      <ul class="ais" aria-label="AI assistants buyers use">
+        <li>ChatGPT</li><li>Gemini</li><li>Claude</li><li>Perplexity</li><li>Grok</li><li>Copilot</li>
+      </ul>
+      <p class="lead">More and more buyers ask an AI assistant first and Google second. The assistant does not show a
+        list of links: it writes one answer and names a few companies in it. We check whether you are among them, who
+        is named instead of you and what to fix so you get named. In any EU language. A 5-question summary is free.</p>
+      <ol class="steps">
+        <li><b>You enter your website.</b> And who you sell to, if you like.</li>
+        <li><b>We ask the assistants your buyers' questions.</b> ChatGPT, Gemini, Claude and Perplexity, with web search on.</li>
+        <li><b>Within 3 working days you get the summary.</b> Who is named, whether you are, and three fixes.</li>
+      </ol>
       <p class="small">G2 2026 survey of 1,076 buyers: 51% of B2B software buyers now start their research in an AI
         chatbot more often than in Google, and 33% bought from a vendor they first heard of in a chatbot.
         <a href="https://sell.g2.com/2026-buyer-behavior-report">Source</a></p>
@@ -98,6 +111,11 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
         <p class="err" id="url-err" aria-live="polite"></p>
       </div>
       <div class="field">
+        <label for="em">Your email</label>
+        <input id="em" name="email" type="email" autocomplete="email" required aria-describedby="em-err">
+        <p class="err" id="em-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
         <label for="co">Company <span class="small">(optional)</span></label>
         <input id="co" name="co" type="text" autocomplete="organization">
       </div>
@@ -107,11 +125,11 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
         <p class="help" id="what-help">For example: custom sheet-metal parts for machine builders in Germany and
           Austria. We turn this into the questions your buyers ask.</p>
       </div>
-      <button class="btn" type="submit">Prepare the request email</button>
-      <p class="small" style="margin:10px 0 0">The button opens your email program with a ready message to
-        info@rtdsolutions.si. We send the summary within 3 working days to the address you write from and use your
-        details for nothing else. One free summary per company; requests are handled in the order they
-        arrive.</p>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send request</button>
+      <p class="small" style="margin:10px 0 0">Your request comes straight to us. One free summary per company,
+        in the order requests arrive. We use your details only for this summary; the form is delivered by the
+        FormSubmit service.</p>
     </form>
   </div>
 </section>
@@ -121,7 +139,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
     <h2>What we check</h2>
     <div class="grid2">
       <div class="card"><h3>Who the assistants name</h3>
-        <p>For your buyers' questions we record which companies ChatGPT and Perplexity name, and whether yours is
+        <p>For your buyers' questions we record which companies ChatGPT, Claude, Gemini and Perplexity name, and whether yours is
           one of them.</p></div>
       <div class="card"><h3>Which sources they rely on</h3>
         <p>Directories, media, comparison sites, competitors' pages. Where the assistants look for answers, you need
@@ -143,13 +161,13 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
       <div class="card">
         <h3>Summary</h3>
         <p class="price">EUR 0</p>
-        <p>5 of your buyers' questions, ChatGPT and Perplexity: who is named, whether you are, and the three most
+        <p>5 of your buyers' questions, ChatGPT, Claude, Gemini and Perplexity: who is named, whether you are, and the three most
           important fixes. Within 3 working days.</p>
       </div>
       <div class="card">
         <h3>Full report</h3>
         <p class="price">EUR 190 <small>excl. VAT</small></p>
-        <p>20 questions, ChatGPT, Perplexity and Claude, each asked several times because answers vary. The sources
+        <p>20 questions, ChatGPT, Claude, Gemini and Perplexity, each asked several times because answers vary. The sources
           the assistants rely on, a review of your site and a fix list ordered by impact.</p>
       </div>
       <div class="card">
@@ -168,18 +186,20 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
 
 <section class="section">
   <div class="wrap">
-    <h2>An example from our own measurement</h2>
+    <h2>What we measured</h2>
     <div class="finding">
-      <p>On 13 October 2026 we asked an AI assistant with web search six questions of the kind buyers ask.</p>
-      <p>Asked who audits website accessibility under the Slovenian accessibility law, it named no provider at all.
-        Asked about custom machine builders, it named companies covered by the press and directories, and none of the
-        17 smaller Slovenian builders we checked. For made-to-measure furniture it relied on paid advertorials on news
-        portals.</p>
-      <p><b>What it means:</b> assistants name the companies the web talks about. A company with only a brochure
-        website is invisible to them, however good it is.</p>
+      <p><b>14 October 2026, webshops.</b> For 20 Slovenian webshops we asked ChatGPT and Perplexity about the kind
+        of products each shop sells, for example "Which are the best Slovenian online furniture shops?".
+        <b>8 of the 20 shops were named by neither assistant.</b> Both relied most on Mimovrste, Big Bang and
+        Merkur: large retailers that many other pages write about.</p>
+      <p><b>13 October 2026, services.</b> Asked about custom machine builders, an assistant named companies covered
+        by the press and directories, and none of the 17 smaller Slovenian builders we checked. Asked who audits
+        website accessibility under the Slovenian accessibility law, it named no provider at all.</p>
+      <p><b>What it means:</b> assistants name the companies the web talks about and whose pages they can read. A
+        company with only a brochure website stays out of the answer, however good it is.</p>
     </div>
-    <p class="small">One measurement, one assistant, one try per question. That is why our reports ask each question
-      several times and of several assistants.</p>
+    <p class="small">One try per question. Answers vary, so our reports ask each question several times and of
+      several assistants.</p>
   </div>
 </section>
 
@@ -215,6 +235,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   </div>
 </footer>
 
+<script src="send.js"></script>
 <script>
 const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
 f.addEventListener("submit", e => {
@@ -225,10 +246,10 @@ f.addEventListener("submit", e => {
   try { host = new URL(v).hostname; } catch (_) {}
   if (!host || !host.includes(".")) { err.textContent = "Enter your company website, for example https://www.your-company.eu"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
   err.textContent = ""; url.removeAttribute("aria-invalid");
-  const co = document.getElementById("co").value.trim(), what = document.getElementById("what").value.trim();
-  const body = `Hello,\n\nplease send the free AI visibility summary for:\n${v}\n`
-    + (co ? `\nCompany: ${co}\n` : "") + (what ? `\nWhat we sell, to whom, language: ${what}\n` : "");
-  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("AI visibility: " + host)}&body=${encodeURIComponent(body)}`;
+  const email = rtdEmail(f); if (!email) return;
+  rtdSend(f, "AI visibility: " + host, { "Website": v, email: email,
+    "Company": document.getElementById("co").value.trim(),
+    "What they sell, to whom, language": document.getElementById("what").value.trim() });
 });
 </script>
 </body>

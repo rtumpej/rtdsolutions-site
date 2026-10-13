@@ -34,6 +34,8 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
 .faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
 .prose { max-width: 80ch; }
 .prose p { margin: 0 0 12px; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+.send-status { font-size: 15px; margin: 10px 0 0; } .send-ok { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -92,6 +94,11 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
         <p class="err" id="shop-err" aria-live="polite"></p>
       </div>
       <div class="field">
+        <label for="em">Your email</label>
+        <input id="em" name="email" type="email" autocomplete="email" required aria-describedby="em-err">
+        <p class="err" id="em-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
         <label for="country">Country your business is in</label>
         <input id="country" name="country" type="text" autocomplete="country-name">
       </div>
@@ -111,10 +118,11 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
           <option>More than 200</option>
         </select>
       </div>
-      <button class="btn" type="submit">Prepare the waitlist email</button>
-      <p class="small" style="margin:10px 0 0">The button opens your email program with a prepared message to
-        info@rtdsolutions.si. One email, no payment, no commitment. We use your details only to count demand and to
-        tell you whether and when we open.</p>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Join the waitlist</button>
+      <p class="small" style="margin:10px 0 0">Your details come straight to us. No payment, no commitment. We
+        use them only to count demand and to tell you whether and when we open; the form is delivered by the
+        FormSubmit service.</p>
     </form>
   </div>
 </section>
@@ -248,6 +256,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   </div>
 </footer>
 
+<script src="send.js"></script>
 <script>
 const f = document.getElementById("f"), shop = document.getElementById("shop"), err = document.getElementById("shop-err");
 f.addEventListener("submit", e => {
@@ -261,8 +270,9 @@ f.addEventListener("submit", e => {
   // Short shop name for the subject: host without "www." plus the path (Etsy and Amazon shops share a host).
   const name = (u.hostname.replace(/^www\./, "") + u.pathname).replace(/\/+$/, "").slice(0, 80);
   const val = id => document.getElementById(id).value.trim();
-  const body = `Hello,\n\nplease add me to the MakerRep EU waitlist.\n\nShop: ${v}\nCountry: ${val("country")}\nWhat I make: ${val("what")}\nOrders from EU customers per month: ${val("orders")}\n`;
-  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("MakerRep waitlist: " + name)}&body=${encodeURIComponent(body)}`;
+  const email = rtdEmail(f); if (!email) return;
+  rtdSend(f, "MakerRep waitlist: " + name, { "Shop": v, email: email, "Country": val("country"),
+    "What they make": val("what"), "EU orders per month": val("orders") });
 });
 </script>
 </body>

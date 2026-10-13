@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>Ali vas ChatGPT pozna? Pregled vidnosti v AI asistentih | RTD Solutions</title>
-<meta name="description" content="Preverimo, kaj AI asistenti (ChatGPT, Perplexity in drugi) odgovorijo, ko vaši kupci iščejo izdelke ali storitve, kot so vaše: koga imenujejo, na katere vire se opirajo in kaj popraviti, da omenijo vas. Povzetek za 5 vprašanj je brezplačen.">
+<title>Ali vas AI asistenti priporočijo? Vidni v AI | RTD Solutions</title>
+<meta name="description" content="Preverimo, kaj AI asistenti (ChatGPT, Gemini, Claude, Perplexity, Grok in drugi) odgovorijo, ko vaši kupci iščejo izdelke ali storitve, kot so vaše: koga imenujejo, na katere vire se opirajo in kaj popraviti, da omenijo vas. Povzetek za 5 vprašanj je brezplačen.">
 <link rel="alternate" hreflang="sl" href="https://rtdsolutions.si/ai-vidnost.html">
 <link rel="alternate" hreflang="en" href="https://rtdsolutions.si/ai-visibility.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
@@ -33,6 +33,11 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
 .finding p { margin: 0 0 10px; } .finding p:last-child { margin: 0; }
 .faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
 .bar .lang { margin-left: auto; }
+.ais { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 4px 0 18px; }
+.ais li { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 4px 12px; font-weight: 600; font-size: 15px; color: var(--ink); }
+.steps { margin: 18px 0 0; padding-left: 22px; max-width: 60ch; } .steps li { margin: 0 0 8px; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+.send-status { font-size: 15px; margin: 10px 0 0; } .send-ok { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0; }
 .also { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 8px 0 0; }
 </style>
 <script type="application/ld+json">
@@ -41,7 +46,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   "@type": "Service",
   "name": "Vidni v AI: pregled vidnosti v AI asistentih",
   "serviceType": "Pregled vidnosti podjetja v odgovorih AI asistentov (GEO)",
-  "description": "Kaj AI asistenti (ChatGPT, Perplexity in drugi) odgovorijo na vprašanja vaših kupcev, koga imenujejo, na katere vire se opirajo, in seznam popravkov.",
+  "description": "Kaj AI asistenti (ChatGPT, Gemini, Claude, Perplexity, Grok in drugi) odgovorijo na vprašanja vaših kupcev, koga imenujejo, na katere vire se opirajo, in seznam popravkov.",
   "url": "https://rtdsolutions.si/ai-vidnost.html",
   "areaServed": {"@type": "Country", "name": "Slovenija"},
   "availableLanguage": ["sl", "en"],
@@ -82,10 +87,18 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow">Vidni v AI · pregled za podjetja</p>
-      <h1>Ali vas ChatGPT pozna?</h1>
-      <p class="lead">Kupci vse pogosteje najprej vprašajo ChatGPT ali Perplexity, šele nato Google. AI asistentom
-        postavimo vprašanja, ki jih postavljajo vaši kupci, in vam pokažemo, koga imenujejo, na katere vire se
-        opirajo in ali omenijo vas. Povzetek za 5 vprašanj je brezplačen.</p>
+      <h1>Ali vas AI asistenti priporočijo?</h1>
+      <ul class="ais" aria-label="AI asistenti, ki jih uporabljajo kupci">
+        <li>ChatGPT</li><li>Gemini</li><li>Claude</li><li>Perplexity</li><li>Grok</li><li>Copilot</li>
+      </ul>
+      <p class="lead">Kupci vse pogosteje najprej vprašajo AI asistenta, šele nato Google. Asistent ne pokaže
+        seznama zadetkov, ampak napiše en odgovor in v njem imenuje nekaj podjetij. Preverimo, ali ste med njimi,
+        koga imenuje namesto vas in kaj popraviti, da vas bo imenoval. Povzetek za 5 vprašanj je brezplačen.</p>
+      <ol class="steps">
+        <li><b>Vpišete spletno stran.</b> In komu prodajate, če želite.</li>
+        <li><b>Asistentom postavimo vprašanja vaših kupcev.</b> ChatGPT, Gemini, Claude in Perplexity, z iskanjem po spletu.</li>
+        <li><b>V 3 delovnih dneh dobite povzetek.</b> Kdo je imenovan, ali ste med njimi in trije popravki.</li>
+      </ol>
       <p class="small">Raziskava G2 (2026, 1.076 kupcev): 51 % kupcev poslovne programske opreme iskanje pogosteje
         začne v AI klepetalniku kot v Googlu, 33 % pa jih je kupilo pri ponudniku, za katerega so prvič slišali v
         klepetalniku. <a href="https://sell.g2.com/2026-buyer-behavior-report">Vir</a></p>
@@ -98,6 +111,11 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
         <p class="err" id="url-err" aria-live="polite"></p>
       </div>
       <div class="field">
+        <label for="em">Vaš e-naslov</label>
+        <input id="em" name="email" type="email" autocomplete="email" required aria-describedby="em-err">
+        <p class="err" id="em-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
         <label for="co">Podjetje <span class="small">(neobvezno)</span></label>
         <input id="co" name="co" type="text" autocomplete="organization">
       </div>
@@ -107,11 +125,10 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
         <p class="help" id="what-help">Na primer: lasersko rezanje pločevine za podjetja na Štajerskem. Iz tega
           sestavimo vprašanja, ki jih postavljajo vaši kupci.</p>
       </div>
-      <button class="btn" type="submit">Pripravi e-sporočilo z zahtevo</button>
-      <p class="small" style="margin:10px 0 0">Gumb odpre vaš e-poštni program s pripravljenim sporočilom na
-        info@rtdsolutions.si. Povzetek pošljemo v 3 delovnih dneh na naslov, s katerega pišete. Vaših podatkov
-        ne uporabimo za nič drugega. En brezplačen povzetek na podjetje; zahteve obdelamo po vrstnem redu
-        prejema.</p>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Pošlji zahtevo</button>
+      <p class="small" style="margin:10px 0 0">Zahteva pride neposredno k nam. En brezplačen povzetek na podjetje,
+        po vrstnem redu prejema. Podatke uporabimo samo za ta povzetek; obrazec posreduje storitev FormSubmit.</p>
     </form>
   </div>
 </section>
@@ -121,7 +138,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
     <h2>Kaj preverimo</h2>
     <div class="grid2">
       <div class="card"><h3>Koga asistenti imenujejo</h3>
-        <p>Za vprašanja vaših kupcev zapišemo, katera podjetja imenujejo ChatGPT, Perplexity in drugi asistenti in ali je med njimi
+        <p>Za vprašanja vaših kupcev zapišemo, katera podjetja imenujejo ChatGPT, Claude, Gemini, Perplexity in drugi asistenti in ali je med njimi
           vaše.</p></div>
       <div class="card"><h3>Na katere vire se opirajo</h3>
         <p>Imeniki, mediji, primerjalniki, strani konkurentov. Tam, kjer asistenti iščejo odgovore, morate biti
@@ -143,13 +160,13 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
       <div class="card">
         <h3>Povzetek</h3>
         <p class="price">0 EUR</p>
-        <p>5 vprašanj vaših kupcev, ChatGPT in Perplexity: kdo je imenovan, ali ste med njimi in trije
+        <p>5 vprašanj vaših kupcev, ChatGPT, Claude, Gemini in Perplexity: kdo je imenovan, ali ste med njimi in trije
           najpomembnejši popravki. V 3 delovnih dneh.</p>
       </div>
       <div class="card">
         <h3>Celotno poročilo</h3>
         <p class="price">190 EUR <small>+ DDV</small></p>
-        <p>20 vprašanj, ChatGPT, Perplexity in Claude, vsako vprašanje večkrat, ker se odgovori spreminjajo.
+        <p>20 vprašanj, ChatGPT, Claude, Gemini in Perplexity, vsako vprašanje večkrat, ker se odgovori spreminjajo.
           Viri, na katere se asistenti opirajo, pregled vaše strani in seznam popravkov po vrstnem redu učinka.</p>
       </div>
       <div class="card">
@@ -164,17 +181,21 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
 
 <section class="section">
   <div class="wrap">
-    <h2>Primer iz naše meritve</h2>
+    <h2>Kaj smo izmerili</h2>
     <div class="finding">
-      <p>13. 10. 2026 smo AI asistentu z iskanjem po spletu postavili šest vprašanj, kakršna postavljajo kupci.</p>
-      <p>Na vprašanje »Kdo v Sloveniji pregleda dostopnost spletne strani po ZDPSI?« ni imenoval nobenega
-        ponudnika. Pri izdelovalcih strojev po meri je imenoval podjetja, o katerih pišejo mediji in imeniki, ni
-        pa imenoval nobenega od 17 manjših slovenskih izdelovalcev, ki smo jih preverili. Pri pohištvu po meri se
-        je oprl na plačane oglasne članke na novičarskih portalih.</p>
-      <p><b>Kaj to pomeni:</b> asistenti imenujejo podjetja, o katerih piše splet. Podjetje, ki ima samo
-        predstavitveno stran, je zanje nevidno, četudi je v svoji dejavnosti najboljše.</p>
+      <p><b>14. 10. 2026, spletne trgovine.</b> ChatGPT in Perplexity smo za 20 slovenskih spletnih trgovin vprašali
+        po vrsti izdelkov, ki jih trgovina prodaja, na primer »Katere so najboljše slovenske spletne trgovine s
+        pohištvom?«. <b>8 od 20 trgovin ni omenil noben od obeh asistentov.</b> Najpogosteje sta se oprla na
+        Mimovrste, Big Bang in Merkur: velike trgovine, o katerih piše veliko drugih strani.</p>
+      <p><b>13. 10. 2026, storitve.</b> Pri izdelovalcih strojev po meri je asistent imenoval podjetja, o katerih
+        pišejo mediji in imeniki, ni pa imenoval nobenega od 17 manjših slovenskih izdelovalcev, ki smo jih
+        preverili. Na vprašanje »Kdo v Sloveniji pregleda dostopnost spletne strani po ZDPSI?« ni imenoval
+        nobenega ponudnika: mesto v odgovoru je bilo prazno.</p>
+      <p><b>Kaj to pomeni:</b> asistenti imenujejo podjetja, o katerih piše splet in katerih strani lahko
+        preberejo. Kdor ima samo lastno predstavitveno stran, ostane v odgovoru neviden, tudi če je v svoji
+        dejavnosti dober.</p>
     </div>
-    <p class="small">Ena meritev, en asistent, en poskus na vprašanje. Zato v poročilih vsako vprašanje postavimo
+    <p class="small">En poskus na vprašanje. Odgovori se spreminjajo, zato v poročilih vsako vprašanje postavimo
       večkrat in več asistentom.</p>
   </div>
 </section>
@@ -211,6 +232,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   </div>
 </footer>
 
+<script src="send.js"></script>
 <script>
 const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
 f.addEventListener("submit", e => {
@@ -221,10 +243,10 @@ f.addEventListener("submit", e => {
   try { host = new URL(v).hostname; } catch (_) {}
   if (!host || !host.includes(".")) { err.textContent = "Vpišite spletno stran podjetja, na primer https://www.vase-podjetje.si"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
   err.textContent = ""; url.removeAttribute("aria-invalid");
-  const co = document.getElementById("co").value.trim(), what = document.getElementById("what").value.trim();
-  const body = `Pozdravljeni,\n\nprosim za brezplačen povzetek vidnosti v AI asistentih za:\n${v}\n`
-    + (co ? `\nPodjetje: ${co}\n` : "") + (what ? `\nKaj prodajamo in komu: ${what}\n` : "");
-  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("Vidnost v AI: " + host)}&body=${encodeURIComponent(body)}`;
+  const email = rtdEmail(f); if (!email) return;
+  rtdSend(f, "Vidni v AI: " + host, { "Spletna stran": v, email: email,
+    "Podjetje": document.getElementById("co").value.trim(),
+    "Kaj prodajajo in komu": document.getElementById("what").value.trim() });
 });
 </script>
 </body>

@@ -25,6 +25,16 @@
 .price small { font-size: 15px; font-weight: 500; color: var(--muted); }
 .small { font-size: 14px; color: var(--muted); }
 .faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
+.req-form { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 22px; box-shadow: var(--shadow); }
+.req-form h2, .req-form h3 { font-size: 20px; margin: 0 0 14px; }
+.field { margin: 0 0 14px; }
+.field label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin: 0 0 6px; }
+.field input, .field textarea { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #b9c3d0; border-radius: 10px; color: var(--ink); background: #fff; }
+.field textarea { min-height: 76px; resize: vertical; }
+.field .help { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.err { color: #b42318; font-size: 14px; margin: 6px 0 0; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+.send-status { font-size: 15px; margin: 10px 0 0; } .send-ok { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0; }
 </style>
 </head>
 <body>
@@ -47,11 +57,31 @@
         ManualKeep to uredi namesto vas, z zgodovino izdaj po serijskih številkah.</p>
       <div class="actions">
         <a class="btn" href="navodila-demo.html">Poglejte primer</a>
-        <a class="btn ghost" href="mailto:info@rtdsolutions.si?subject=ManualKeep%3A%20prijava%20na%20pilot&amp;body=Pozdravljeni%2C%0A%0Azanima%20nas%20brezpla%C4%8Den%20pilot%20ManualKeep.%0A%0APodjetje%3A%0A%C5%A0tevilo%20modelov%20strojev%3A%0AJeziki%20navodil%3A%0A">Prijava na brezplačen pilot</a>
+        <a class="btn ghost" href="#pilot">Prijava na brezplačen pilot</a>
       </div>
     </div>
     <div class="qrside"><img src="qr-navodila-demo.svg" alt="QR koda, ki odpre primer digitalnih navodil" width="180" height="180">
       <p>Skenirajte s telefonom: tako kupec vidi navodila vašega stroja.</p></div>
+  </div>
+</section>
+
+<section class="section" id="pilot">
+  <div class="wrap">
+    <h2>Prijava na brezplačen pilot</h2>
+    <form class="req-form" id="pf" novalidate>
+      <div class="field">
+        <label for="p-em">Vaš e-naslov</label>
+        <input id="p-em" name="email" type="email" autocomplete="email" required aria-describedby="p-em-err">
+        <p class="err" id="p-em-err" aria-live="polite"></p>
+      </div>
+      <div class="field"><label for="p-co">Podjetje</label><input id="p-co" name="co" type="text" autocomplete="organization"></div>
+      <div class="field"><label for="p-n">Število modelov strojev</label><input id="p-n" name="models" type="text" inputmode="numeric"></div>
+      <div class="field"><label for="p-l">Jeziki navodil</label><input id="p-l" name="langs" type="text"></div>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Pošlji prijavo</button>
+      <p class="small" style="margin:10px 0 0">Prijava pride neposredno k nam. Nezavezujoče in brez plačila;
+        odgovorimo v 2 delovnih dneh. Obrazec posreduje storitev FormSubmit.</p>
+    </form>
   </div>
 </section>
 
@@ -125,5 +155,16 @@
     <div><p><a href="mailto:info@rtdsolutions.si">info@rtdsolutions.si</a></p></div>
   </div>
 </footer>
+<script src="send.js"></script>
+<script>
+const pf = document.getElementById("pf");
+pf.addEventListener("submit", e => {
+  e.preventDefault();
+  const email = rtdEmail(pf); if (!email) return;
+  const val = id => document.getElementById(id).value.trim();
+  rtdSend(pf, "ManualKeep: prijava na pilot", { email: email, "Podjetje": val("p-co"),
+    "Število modelov strojev": val("p-n"), "Jeziki navodil": val("p-l") });
+});
+</script>
 </body>
 </html>

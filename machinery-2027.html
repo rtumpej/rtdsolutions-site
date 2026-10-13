@@ -52,6 +52,17 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
 .note { font-size: 14px; color: var(--muted); }
 [hidden] { display: none !important; }
 @media print { .top, .foot, form, .offer, .bar-actions, .hero { display: none !important; } .gap { break-inside: avoid; } }
+.req-form { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 22px; box-shadow: var(--shadow); }
+.req-form h2, .req-form h3 { font-size: 20px; margin: 0 0 14px; }
+.field { margin: 0 0 14px; }
+.field label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin: 0 0 6px; }
+.field input, .field textarea { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #b9c3d0; border-radius: 10px; color: var(--ink); background: #fff; }
+.field textarea { min-height: 76px; resize: vertical; }
+.field .help { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.err { color: #b42318; font-size: 14px; margin: 6px 0 0; }
+.mk-form { margin: 20px 0 0; max-width: 560px; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+.send-status { font-size: 15px; margin: 10px 0 0; } .send-ok { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -128,7 +139,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
             Available in English and German (and Slovene).</p>
           <p class="note">The kit is expected to be ready by 16 November 2026. A reservation is not binding and
             involves no payment; we confirm the price at release.</p>
-          <a class="btn" id="mk1" href="#">Reserve the kit</a>
+          <button class="btn" type="button" id="mk1" aria-controls="mkf" aria-expanded="false">Reserve the kit</button>
         </div>
         <div class="card">
           <h3>Documentation review of one machine</h3>
@@ -138,9 +149,28 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
             review.</p>
           <p class="note">We do not carry out conformity assessment; the manufacturer signs the declaration of
             conformity.</p>
-          <a class="btn ghost" id="mk2" href="#">Ask for a review</a>
+          <button class="btn ghost" type="button" id="mk2" aria-controls="mkf" aria-expanded="false">Ask for a review</button>
         </div>
       </div>
+      <form class="req-form mk-form" id="mkf" novalidate hidden>
+        <h3 id="mkf-h"></h3>
+        <div class="field">
+          <label for="mk-em">Your email</label>
+          <input id="mk-em" name="email" type="email" autocomplete="email" required aria-describedby="mk-em-err">
+          <p class="err" id="mk-em-err" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="mk-co">Company and country</label>
+          <input id="mk-co" name="co" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="mk-note">Type of machines or the machine <span class="small">(optional)</span></label>
+          <input id="mk-note" name="note" type="text">
+        </div>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Send request</button>
+        <p class="small" style="margin:10px 0 0">Your request comes straight to us, with your self-check result. No commitment and no payment; we reply within 2 working days. The form is delivered by the FormSubmit service.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -166,6 +196,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
   </div>
 </footer>
 
+<script src="send.js"></script>
 <script>
 const EMAIL = "info@rtdsolutions.si";
 // Each question: id, group, text, hint, and gap(answer) -> list of findings.
@@ -276,7 +307,6 @@ function answers() { return Object.fromEntries(Q.map(q => [q.id, (form.elements[
 function updateProg() { const n = Object.values(answers()).filter(Boolean).length; prog.textContent = `${n} of ${Q.length} answered. Unanswered questions count as “Not sure”.`; }
 form.addEventListener("change", updateProg); updateProg();
 
-function mailto(subject, body) { return `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }
 
 form.addEventListener("submit", e => {
   e.preventDefault();
@@ -295,13 +325,30 @@ form.addEventListener("submit", e => {
     (g.demo ? `<p><a href="navodila-demo.html" hreflang="sl">See an example of digital instructions with a QR code (demo page in Slovene)</a></p>` : "") +
     `<p class="ref">Reference: ${esc(g.r)}</p></article>`).join("");
   const list = found.filter(g => g.s).map(g => `- ${SEV[g.s]}: ${g.h}`).join("\n");
-  document.getElementById("mk1").href = mailto("Reservation: Machinery 2027 kit",
-    `Hello,\n\nI would like to reserve the Machinery 2027 kit (EUR 149 excl. VAT; the reservation is not binding).\n\nCompany:\nCountry:\nType of machines:\nKit language (English / German / Slovene):\n\nSelf-check result:\n${list}\n`);
-  document.getElementById("mk2").href = mailto("Documentation review of one machine (Regulation 2023/1230)",
-    `Hello,\n\nwe are interested in a documentation review of one machine (EUR 290 excl. VAT).\n\nCompany:\nCountry:\nMachine:\n\nSelf-check result:\n${list}\n`);
+  lastList = list;
   const r = document.getElementById("result");
   r.hidden = false; r.focus(); r.scrollIntoView();
 });
+let lastList = "";
+const mkf = document.getElementById("mkf");
+const KINDS = { mk1: ["Reservation: Machinery 2027 kit", "Reserve the Machinery 2027 kit"], mk2: ["Documentation review of one machine (Regulation 2023/1230)", "Documentation review of one machine"] };
+["mk1", "mk2"].forEach(id => document.getElementById(id).addEventListener("click", () => {
+  mkf.dataset.kind = id;
+  const h = document.getElementById("mkf-h"); if (h) h.textContent = KINDS[id][1];
+  ["mk1", "mk2"].forEach(b => document.getElementById(b).setAttribute("aria-expanded", String(b === id)));
+  mkf.hidden = false;
+  const em = document.getElementById("mk-em"); if (em) em.focus(); else mkf.focus();
+}));
+mkf.addEventListener("submit", e => {
+  e.preventDefault();
+  const email = rtdEmail(mkf); if (!email) return;
+  const k = KINDS[mkf.dataset.kind || "mk1"];
+  rtdSend(mkf, k[0], { "Request": k[1], email: email,
+    "Company": document.getElementById("mk-co").value.trim(),
+    "Machines": document.getElementById("mk-note").value.trim(),
+    "Self-check result": lastList || "-" });
+});
+
 document.getElementById("print").addEventListener("click", () => window.print());
 document.getElementById("again").addEventListener("click", () => { form.scrollIntoView(); form.querySelector("input").focus(); });
 </script>

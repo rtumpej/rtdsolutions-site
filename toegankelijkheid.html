@@ -27,6 +27,8 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
 .card .price, .price { font-size: 28px; font-weight: 800; color: var(--ink); margin: 0 0 8px; }
 .price small { font-size: 15px; font-weight: 500; color: var(--muted); }
 .faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
+.hp { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; }
+.send-status { font-size: 15px; margin: 10px 0 0; } .send-ok { font-size: 18px; font-weight: 600; color: var(--ink); margin: 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -89,13 +91,19 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
         <p class="err" id="url-err" aria-live="polite"></p>
       </div>
       <div class="field">
+        <label for="em">Uw e-mailadres</label>
+        <input id="em" name="email" type="email" autocomplete="email" required aria-describedby="em-err">
+        <p class="err" id="em-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
         <label for="co">Bedrijf <span class="small">(optioneel)</span></label>
         <input id="co" name="co" type="text" autocomplete="organization">
       </div>
-      <button class="btn" type="submit">E-mail met aanvraag opstellen</button>
-      <p class="small" style="margin:10px 0 0">De knop opent uw e-mailprogramma met een kant-en-klaar bericht aan
-        info@rtdsolutions.si. We sturen de samenvatting naar het adres waarvan u mailt. We gebruiken uw gegevens
-        nergens anders voor.</p>
+      <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Aanvraag versturen</button>
+      <p class="small" style="margin:10px 0 0">Uw aanvraag komt direct bij ons binnen. We sturen de samenvatting
+        binnen 3 werkdagen. We gebruiken uw gegevens alleen voor deze controle; het formulier wordt verzonden via
+        de dienst FormSubmit.</p>
     </form>
   </div>
 </section>
@@ -152,6 +160,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
   </div>
 </footer>
 
+<script src="send.js"></script>
 <script>
 const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
 f.addEventListener("submit", e => {
@@ -162,9 +171,9 @@ f.addEventListener("submit", e => {
   try { host = new URL(v).hostname; } catch (_) {}
   if (!host || !host.includes(".")) { err.textContent = "Vul het adres van uw webwinkel in, bijvoorbeeld https://www.uw-webwinkel.nl"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
   err.textContent = ""; url.removeAttribute("aria-invalid");
-  const co = document.getElementById("co").value.trim();
-  const body = `Goedendag,\n\ngraag ontvang ik een gratis toegankelijkheidscheck van de webwinkel:\n${v}\n` + (co ? `\nBedrijf: ${co}\n` : "");
-  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("Toegankelijkheidscheck: " + host)}&body=${encodeURIComponent(body)}`;
+  const email = rtdEmail(f); if (!email) return;
+  rtdSend(f, "Toegankelijkheidscheck: " + host, { "Webwinkel": v, email: email,
+    "Bedrijf": document.getElementById("co").value.trim() });
 });
 </script>
 </body>
