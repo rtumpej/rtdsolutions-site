@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
-<title>Brezplačen pregled dostopnosti spletne trgovine (ZDPSI) | RTD Solutions</title>
-<meta name="description" content="Brezplačen samodejni pregled dostopnosti vaše spletne trgovine po Zakonu o dostopnosti (ZDPSI): enostranski povzetek najresnejših težav v 48 urah. Brez vtičnikov z obljubo takojšnje skladnosti.">
+<title>Je vaša spletna stran dostopna osebam s posebnimi potrebami? Brezplačen pregled (ZDPSI) | RTD Solutions</title>
+<meta name="description" content="Je vaša spletna stran dostopna osebam s posebnimi potrebami? Brezplačen samodejni pregled po Zakonu o dostopnosti do proizvodov in storitev za invalide (ZDPSI, Uradni list RS, št. 14/23 in 14/26): enostranski povzetek najresnejših težav v 48 urah.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
 <link rel="stylesheet" href="style.css">
 <style>
@@ -41,17 +41,21 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; just
 <section class="hero slim">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">Zakon o dostopnosti (ZDPSI) · velja od 28. 6. 2025</p>
-      <h1>Je vaša spletna trgovina dostopna?</h1>
-      <p class="lead">Vpišite naslov trgovine. Samodejno pregledamo ključne strani in vam v 48 urah pošljemo
-        enostranski povzetek najresnejših težav, s kriterijem WCAG in primerom popravka. Brezplačno.</p>
-      <p class="small">Zakon velja za spletne trgovine vseh podjetij razen mikro podjetij (manj kot 10 zaposlenih
-        in letni promet ali bilančna vsota do 2 milijona EUR).</p>
+      <p class="eyebrow">Dostopnost za osebe s posebnimi potrebami · ZDPSI, velja od 28. 6. 2025</p>
+      <h1>Je vaša spletna stran dostopna osebam s posebnimi potrebami?</h1>
+      <p class="lead">Slepi in slabovidni z bralnikom zaslona, ljudje, ki ne morejo uporabljati miške, starejši:
+        vsi morajo na vaši strani najti informacije in opraviti nakup. Vpišite naslov strani. Samodejno pregledamo
+        ključne strani in vam v 48 urah pošljemo enostranski povzetek najresnejših težav, s kriterijem WCAG in
+        primerom popravka. Brezplačno.</p>
+      <p class="small"><b>Zakonodaja:</b> <a href="https://www.uradni-list.si/glasilo-uradni-list-rs/vsebina/2023-01-0238">Zakon o dostopnosti do proizvodov in storitev
+        za invalide (ZDPSI, Uradni list RS, št. 14/23 in 14/26)</a> prenaša evropski akt o dostopnosti (Direktiva
+        (EU) 2019/882). Od 28. 6. 2025 zahteva dostopnost spletnih trgovin in drugih storitev e-poslovanja od vseh
+        podjetij razen mikro podjetij (manj kot 10 zaposlenih in letni promet ali bilančna vsota do 2 milijona EUR).</p>
     </div>
     <form class="req-form" id="f" novalidate>
       <h2>Zahtevajte brezplačen pregled</h2>
       <div class="field">
-        <label for="url">Naslov spletne trgovine</label>
+        <label for="url">Naslov spletne strani ali trgovine</label>
         <input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.vasa-trgovina.si" required aria-describedby="url-help url-err">
         <p class="help" id="url-help">Pregledamo domačo stran, stran izdelka, košarico in kontakt.</p>
         <p class="err" id="url-err" aria-live="polite"></p>
@@ -130,10 +134,10 @@ f.addEventListener("submit", e => {
   if (v && !/^https?:\/\//i.test(v)) v = "https://" + v;
   let host = "";
   try { host = new URL(v).hostname; } catch (_) {}
-  if (!host || !host.includes(".")) { err.textContent = "Vpišite naslov trgovine, na primer https://www.vasa-trgovina.si"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
+  if (!host || !host.includes(".")) { err.textContent = "Vpišite naslov strani, na primer https://www.vasa-trgovina.si"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
   err.textContent = ""; url.removeAttribute("aria-invalid");
   const email = rtdEmail(f); if (!email) return;
-  rtdSend(f, "Pregled dostopnosti: " + host, { "Spletna trgovina": v, email: email,
+  rtdSend(f, "Pregled dostopnosti: " + host, { "Spletna stran": v, email: email,
     "Podjetje": document.getElementById("co").value.trim() });
 });
 </script>
