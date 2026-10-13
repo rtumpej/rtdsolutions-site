@@ -4,7 +4,8 @@
 // the visitor gets a ready email link instead, so no request is lost.
 (function () {
   "use strict";
-  var ENDPOINT = "https://formsubmit.co/ajax/info@rtdsolutions.si";
+  // FormSubmit alias for info@rtdsolutions.si (keeps the address out of the code; activated 14 Oct 2026).
+  var ENDPOINT = "https://formsubmit.co/ajax/04ffa114b7b632341ed46f1aefb53879";
   var MAIL = "info@rtdsolutions.si";
   var T = {
     sl: { sending: "Pošiljam …", ok: "Hvala. Zahtevo smo prejeli in vam odgovorimo na ",
