@@ -44,7 +44,7 @@ a { color: var(--link); }
 .hero-grid { display: grid; grid-template-columns: 1.25fr .9fr; gap: 56px; align-items: center; }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
 .eyebrow { display: inline-block; margin: 0 0 16px; font-size: 13px; font-weight: 700; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--accent); }
+  text-transform: uppercase; color: #9a4a0c; }
 h1 { font-size: clamp(32px, 4.6vw, 52px); line-height: 1.1; margin: 0 0 20px; }
 .lead { font-size: 19px; color: var(--body); max-width: 56ch; margin: 0 0 30px; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; }

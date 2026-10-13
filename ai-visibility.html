@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Does ChatGPT know your company? AI visibility check | RTD Solutions</title>
+<meta name="description" content="We ask ChatGPT and Perplexity the questions your buyers ask and show you who they name, which sources they rely on and what to fix so they mention you. In any EU language. A 5-question summary is free.">
+<link rel="alternate" hreflang="en" href="https://rtdsolutions.si/ai-visibility.html">
+<link rel="alternate" hreflang="sl" href="https://rtdsolutions.si/ai-vidnost.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero.slim { padding: 52px 0 56px; }
+.hero.slim h1 { font-size: clamp(28px, 4.2vw, 46px); max-width: 21ch; }
+.req-form { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 22px; box-shadow: var(--shadow); }
+.req-form h2 { font-size: 20px; margin: 0 0 14px; }
+.field { margin: 0 0 14px; }
+.field label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin: 0 0 6px; }
+.field input, .field textarea { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #b9c3d0; border-radius: 10px; color: var(--ink); background: #fff; }
+.field textarea { min-height: 76px; resize: vertical; }
+.field .help { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.err { color: #b42318; font-size: 14px; margin: 6px 0 0; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; justify-content: center; }
+.small { font-size: 14px; color: var(--muted); }
+.prices, .grid2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) { .prices, .grid2 { grid-template-columns: 1fr; } }
+.card h3 { margin-top: 0; }
+.price { font-size: 28px; font-weight: 800; color: var(--ink); margin: 0 0 8px; }
+.price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.finding { border-left: 4px solid var(--accent); background: #fff; padding: 16px 20px; border-radius: 0 var(--radius) var(--radius) 0; max-width: 80ch; }
+.finding p { margin: 0 0 10px; } .finding p:last-child { margin: 0; }
+.faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
+.bar .lang { margin-left: auto; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Seen by AI: AI visibility check",
+  "serviceType": "AI assistant visibility audit and fixes (generative engine optimisation)",
+  "description": "What ChatGPT and Perplexity answer to your buyers' questions, who they name, which sources they rely on, and a fix list. In any EU language.",
+  "url": "https://rtdsolutions.si/ai-visibility.html",
+  "areaServed": {"@type": "Place", "name": "European Union"},
+  "availableLanguage": ["en", "sl", "nl", "de", "hr", "it", "fr"],
+  "provider": {"@type": "Organization", "name": "RTD Solutions", "url": "https://rtdsolutions.si/", "email": "info@rtdsolutions.si"},
+  "offers": [
+    {"@type": "Offer", "name": "Summary, 5 questions", "price": "0", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Full report", "price": "190", "priceCurrency": "EUR", "valueAddedTaxIncluded": false},
+    {"@type": "Offer", "name": "Monthly tracking", "priceCurrency": "EUR", "valueAddedTaxIncluded": false,
+     "priceSpecification": {"@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "EUR", "unitCode": "MON", "valueAddedTaxIncluded": false}},
+    {"@type": "Offer", "name": "Webshops: accessibility + AI visibility + agent readiness", "price": "390", "priceCurrency": "EUR", "valueAddedTaxIncluded": false}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Is this the same as SEO?", "acceptedAnswer": {"@type": "Answer", "text": "Partly. In SEO you compete for a place in a list of results. An AI assistant writes one answer and names a few companies in it. Whether you are among them depends on what other sites say about you, how clearly your own site is written, and whether the assistant can read it at all. This is also called GEO, generative engine optimisation."}},
+    {"@type": "Question", "name": "Can you guarantee that ChatGPT will recommend us?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nobody can. Answers change from question to question and from week to week. We measure where you stand, show what to fix, and measure every month whether assistants name you more often."}},
+    {"@type": "Question", "name": "Do you write fake reviews or hidden ads?", "acceptedAnswer": {"@type": "Answer", "text": "No. No fake reviews, no undisclosed advertorials, no fake profiles. The fixes are your own content, listings in real directories and clear facts on your own site."}},
+    {"@type": "Question", "name": "Which languages?", "acceptedAnswer": {"@type": "Answer", "text": "Any EU language. We ask the assistants in the language your buyers use and write the fix pages in that language."}},
+    {"@type": "Question", "name": "Who does the work?", "acceptedAnswer": {"@type": "Answer", "text": "Measurements and drafts are prepared with AI tools. A person reviews every full report before it is sent."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="en.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+    <a class="lang" href="ai-vidnost.html" lang="sl" hreflang="sl">Slovenščina</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero slim">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Seen by AI · a check for companies</p>
+      <h1>Does ChatGPT know your company?</h1>
+      <p class="lead">More and more buyers ask ChatGPT or Perplexity first and Google second. We ask both
+        assistants the questions your buyers ask and show you who they name, which sources they rely on and whether
+        they mention you. In any EU language. A 5-question summary is free.</p>
+      <p class="small">G2 2026 survey of 1,076 buyers: 51% of B2B software buyers now start their research in an AI
+        chatbot more often than in Google, and 33% bought from a vendor they first heard of in a chatbot.
+        <a href="https://sell.g2.com/2026-buyer-behavior-report">Source</a></p>
+    </div>
+    <form class="req-form" id="f" novalidate>
+      <h2>Request the free summary</h2>
+      <div class="field">
+        <label for="url">Company website</label>
+        <input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.your-company.eu" required aria-describedby="url-err">
+        <p class="err" id="url-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="co">Company <span class="small">(optional)</span></label>
+        <input id="co" name="co" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="what">What do you sell, to whom, in which language? <span class="small">(optional)</span></label>
+        <textarea id="what" name="what" aria-describedby="what-help"></textarea>
+        <p class="help" id="what-help">For example: custom sheet-metal parts for machine builders in Germany and
+          Austria. We turn this into the questions your buyers ask.</p>
+      </div>
+      <button class="btn" type="submit">Prepare the request email</button>
+      <p class="small" style="margin:10px 0 0">The button opens your email program with a ready message to
+        info@rtdsolutions.si. We send the summary within 3 working days to the address you write from and use your
+        details for nothing else. One free summary per company; requests are handled in the order they
+        arrive.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>What we check</h2>
+    <div class="grid2">
+      <div class="card"><h3>Who the assistants name</h3>
+        <p>For your buyers' questions we record which companies ChatGPT and Perplexity name, and whether yours is
+          one of them.</p></div>
+      <div class="card"><h3>Which sources they rely on</h3>
+        <p>Directories, media, comparison sites, competitors' pages. Where the assistants look for answers, you need
+          to be too.</p></div>
+      <div class="card"><h3>Whether they can read your site</h3>
+        <p>Whether your site lets AI crawlers in, has structured data, and states the key facts (services, location,
+          references, prices) in text rather than only in images and PDFs.</p></div>
+      <div class="card"><h3>Wrong facts about you</h3>
+        <p>Whether the assistants say something wrong about you: closed, old products, wrong location or wrong
+          prices.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="prices">
+  <div class="wrap">
+    <h2>What you get</h2>
+    <div class="prices">
+      <div class="card">
+        <h3>Summary</h3>
+        <p class="price">EUR 0</p>
+        <p>5 of your buyers' questions, ChatGPT and Perplexity: who is named, whether you are, and the three most
+          important fixes. Within 3 working days.</p>
+      </div>
+      <div class="card">
+        <h3>Full report</h3>
+        <p class="price">EUR 190 <small>excl. VAT</small></p>
+        <p>20 questions, ChatGPT, Perplexity and Claude, each asked several times because answers vary. The sources
+          the assistants rely on, a review of your site and a fix list ordered by impact.</p>
+      </div>
+      <div class="card">
+        <h3>Monthly tracking</h3>
+        <p class="price">EUR 29 <small>excl. VAT per month</small></p>
+        <p>We repeat the measurement every month and show the change, and write one page answering your buyers'
+          questions for your website each month. Cancel any time.</p>
+      </div>
+    </div>
+    <p style="margin-top:20px"><b>Webshops:</b> one review covering the European Accessibility Act (in force for
+      webshops of all but micro-enterprises since 28 June 2025), AI visibility and product data that AI assistants and
+      shopping agents can read. EUR 390 excl. VAT, or EUR 39 a month for monthly tracking. Ask for the free summary
+      with the form above.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>An example from our own measurement</h2>
+    <div class="finding">
+      <p>On 13 October 2026 we asked an AI assistant with web search six questions of the kind buyers ask.</p>
+      <p>Asked who audits website accessibility under the Slovenian accessibility law, it named no provider at all.
+        Asked about custom machine builders, it named companies covered by the press and directories, and none of the
+        17 smaller Slovenian builders we checked. For made-to-measure furniture it relied on paid advertorials on news
+        portals.</p>
+      <p><b>What it means:</b> assistants name the companies the web talks about. A company with only a brochure
+        website is invisible to them, however good it is.</p>
+    </div>
+    <p class="small">One measurement, one assistant, one try per question. That is why our reports ask each question
+      several times and of several assistants.</p>
+  </div>
+</section>
+
+<section class="section alt faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <h3>Is this the same as SEO?</h3>
+    <p>Partly. In SEO you compete for a place in a list of results. An AI assistant writes one answer and names a few
+      companies in it. Whether you are among them depends on what other sites say about you, how clearly your own site
+      is written, and whether the assistant can read it at all. This is also called GEO, generative engine
+      optimisation.</p>
+    <h3>Can you guarantee that ChatGPT will recommend us?</h3>
+    <p>No. Nobody can. Answers change from question to question and from week to week. We measure where you stand,
+      show what to fix, and measure every month whether assistants name you more often.</p>
+    <h3>Do you write fake reviews or hidden ads?</h3>
+    <p>No. No fake reviews, no undisclosed advertorials, no fake profiles. The fixes are your own content, listings in
+      real directories and clear facts on your own site.</p>
+    <h3>Which languages?</h3>
+    <p>Any EU language. We ask the assistants in the language your buyers use and write the fix pages in that
+      language.</p>
+    <h3>Who does the work?</h3>
+    <p>Measurements and drafts are prepared with AI tools. A person reviews every full report before it is sent.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="en.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+      <p>AI visibility, webshop accessibility, machinery compliance.</p></div>
+    <div><p><a href="mailto:info@rtdsolutions.si">info@rtdsolutions.si</a></p>
+      <p><a href="ai-vidnost.html" lang="sl">Slovenščina</a></p></div>
+  </div>
+</footer>
+
+<script>
+const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
+f.addEventListener("submit", e => {
+  e.preventDefault();
+  let v = url.value.trim();
+  if (v && !/^https?:\/\//i.test(v)) v = "https://" + v;
+  let host = "";
+  try { host = new URL(v).hostname; } catch (_) {}
+  if (!host || !host.includes(".")) { err.textContent = "Enter your company website, for example https://www.your-company.eu"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
+  err.textContent = ""; url.removeAttribute("aria-invalid");
+  const co = document.getElementById("co").value.trim(), what = document.getElementById("what").value.trim();
+  const body = `Hello,\n\nplease send the free AI visibility summary for:\n${v}\n`
+    + (co ? `\nCompany: ${co}\n` : "") + (what ? `\nWhat we sell, to whom, language: ${what}\n` : "");
+  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("AI visibility: " + host)}&body=${encodeURIComponent(body)}`;
+});
+</script>
+</body>
+</html>

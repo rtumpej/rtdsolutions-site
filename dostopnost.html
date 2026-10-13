@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Brezplačen pregled dostopnosti spletne trgovine (ZDPSI) | RTD Solutions</title>
+<meta name="description" content="Brezplačen samodejni pregled dostopnosti vaše spletne trgovine po Zakonu o dostopnosti (ZDPSI): enostranski povzetek najresnejših težav v 48 urah. Brez vtičnikov z obljubo takojšnje skladnosti.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero.slim { padding: 52px 0 56px; }
+.hero.slim h1 { font-size: clamp(28px, 4.2vw, 46px); max-width: 21ch; }
+.req-form { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 22px; box-shadow: var(--shadow); }
+.req-form h2 { font-size: 20px; margin: 0 0 14px; }
+.field { margin: 0 0 14px; }
+.field label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin: 0 0 6px; }
+.field input { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #b9c3d0; border-radius: 10px; color: var(--ink); background: #fff; }
+.field .help { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.err { color: #b42318; font-size: 14px; margin: 6px 0 0; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; justify-content: center; }
+.small { font-size: 14px; color: var(--muted); }
+.prices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .prices { grid-template-columns: 1fr; } }
+.card .price, .price { font-size: 28px; font-weight: 800; color: var(--ink); margin: 0 0 8px; }
+.price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Preskoči na vsebino</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero slim">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Zakon o dostopnosti (ZDPSI) · velja od 28. 6. 2025</p>
+      <h1>Je vaša spletna trgovina dostopna?</h1>
+      <p class="lead">Vpišite naslov trgovine. Samodejno pregledamo ključne strani in vam v 48 urah pošljemo
+        enostranski povzetek najresnejših težav, s kriterijem WCAG in primerom popravka. Brezplačno.</p>
+      <p class="small">Zakon velja za spletne trgovine vseh podjetij razen mikro podjetij (manj kot 10 zaposlenih
+        in letni promet ali bilančna vsota do 2 milijona EUR).</p>
+    </div>
+    <form class="req-form" id="f" novalidate>
+      <h2>Zahtevajte brezplačen pregled</h2>
+      <div class="field">
+        <label for="url">Naslov spletne trgovine</label>
+        <input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.vasa-trgovina.si" required aria-describedby="url-help url-err">
+        <p class="help" id="url-help">Pregledamo domačo stran, stran izdelka, košarico in kontakt.</p>
+        <p class="err" id="url-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="co">Podjetje <span class="small">(neobvezno)</span></label>
+        <input id="co" name="co" type="text" autocomplete="organization">
+      </div>
+      <button class="btn" type="submit">Pripravi e-sporočilo z zahtevo</button>
+      <p class="small" style="margin:10px 0 0">Gumb odpre vaš e-poštni program s pripravljenim sporočilom na
+        info@rtdsolutions.si. Povzetek pošljemo na naslov, s katerega pišete. Vaših podatkov ne uporabimo
+        za nič drugega.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="cena">
+  <div class="wrap">
+    <h2>Kaj dobite</h2>
+    <div class="prices">
+      <div class="card">
+        <h3 style="margin-top:0">Povzetek</h3>
+        <p class="price">0 EUR</p>
+        <p>Samodejni pregled ključnih strani; enostranski povzetek najresnejših težav s kriterijem WCAG in primerom
+          popravka. V 48 urah.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Celoten pregled</h3>
+        <p class="price">250 EUR <small>+ DDV</small></p>
+        <p>Dodatno ročni preizkus nakupnega procesa s tipkovnico in bralnikom zaslona, seznam vseh napak po resnosti
+          s popravki za vašega razvijalca in osnutek izjave o dostopnosti. V 48 urah.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Spremljanje</h3>
+        <p class="price">19 EUR <small>+ DDV na mesec</small></p>
+        <p>Vsak mesec ponovni pregled, seznam novih in odpravljenih težav ter posodobljena izjava o dostopnosti.
+          Brez vezave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt faq">
+  <div class="wrap">
+    <h2>Vprašanja</h2>
+    <h3>Ali ponujate vtičnik, ki trgovino takoj uskladi?</h3>
+    <p>Ne. Vtičniki z obljubo takojšnje skladnosti (overlay) težav v kodi ne odpravijo in jih uporabniki bralnikov
+      zaslona pogosto težje uporabljajo. Pokažemo, kaj popraviti v kodi.</p>
+    <h3>Ali je povzetek potrdilo o skladnosti?</h3>
+    <p>Ne. Samodejni pregled ne zazna vseh težav. Pokaže najresnejše in vrstni red popravkov.</p>
+    <h3>Kdo pregleda rezultate?</h3>
+    <p>Pri pregledih uporabljamo orodja umetne inteligence; celoten pregled preveri človek.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+      <p>Dostopnost spletnih trgovin, skladnost strojev, javna naročila.</p></div>
+    <div><p><a href="mailto:info@rtdsolutions.si">info@rtdsolutions.si</a></p></div>
+  </div>
+</footer>
+
+<script>
+const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
+f.addEventListener("submit", e => {
+  e.preventDefault();
+  let v = url.value.trim();
+  if (v && !/^https?:\/\//i.test(v)) v = "https://" + v;
+  let host = "";
+  try { host = new URL(v).hostname; } catch (_) {}
+  if (!host || !host.includes(".")) { err.textContent = "Vpišite naslov trgovine, na primer https://www.vasa-trgovina.si"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
+  err.textContent = ""; url.removeAttribute("aria-invalid");
+  const co = document.getElementById("co").value.trim();
+  const body = `Pozdravljeni,\n\nprosim za brezplačen pregled dostopnosti spletne trgovine:\n${v}\n` + (co ? `\nPodjetje: ${co}\n` : "");
+  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("Pregled dostopnosti: " + host)}&body=${encodeURIComponent(body)}`;
+});
+</script>
+</body>
+</html>

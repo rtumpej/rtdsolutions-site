@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Ali vas ChatGPT pozna? Pregled vidnosti v AI asistentih | RTD Solutions</title>
+<meta name="description" content="Preverimo, kaj AI asistenti (ChatGPT, Perplexity in drugi) odgovorijo, ko vaši kupci iščejo izdelke ali storitve, kot so vaše: koga imenujejo, na katere vire se opirajo in kaj popraviti, da omenijo vas. Povzetek za 5 vprašanj je brezplačen.">
+<link rel="alternate" hreflang="sl" href="https://rtdsolutions.si/ai-vidnost.html">
+<link rel="alternate" hreflang="en" href="https://rtdsolutions.si/ai-visibility.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero.slim { padding: 52px 0 56px; }
+.hero.slim h1 { font-size: clamp(28px, 4.2vw, 46px); max-width: 21ch; }
+.req-form { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 22px; box-shadow: var(--shadow); }
+.req-form h2 { font-size: 20px; margin: 0 0 14px; }
+.field { margin: 0 0 14px; }
+.field label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin: 0 0 6px; }
+.field input, .field textarea { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #b9c3d0; border-radius: 10px; color: var(--ink); background: #fff; }
+.field textarea { min-height: 76px; resize: vertical; }
+.field .help { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.err { color: #b42318; font-size: 14px; margin: 6px 0 0; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; justify-content: center; }
+.small { font-size: 14px; color: var(--muted); }
+.prices, .grid2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.grid2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 900px) { .prices, .grid2 { grid-template-columns: 1fr; } }
+.card h3 { margin-top: 0; }
+.price { font-size: 28px; font-weight: 800; color: var(--ink); margin: 0 0 8px; }
+.price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.finding { border-left: 4px solid var(--accent, #e0893a); background: #fff; padding: 16px 20px; border-radius: 0 var(--radius) var(--radius) 0; max-width: 80ch; }
+.finding p { margin: 0 0 10px; } .finding p:last-child { margin: 0; }
+.faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
+.bar .lang { margin-left: auto; }
+.also { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 8px 0 0; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Vidni v AI: pregled vidnosti v AI asistentih",
+  "serviceType": "Pregled vidnosti podjetja v odgovorih AI asistentov (GEO)",
+  "description": "Kaj AI asistenti (ChatGPT, Perplexity in drugi) odgovorijo na vprašanja vaših kupcev, koga imenujejo, na katere vire se opirajo, in seznam popravkov.",
+  "url": "https://rtdsolutions.si/ai-vidnost.html",
+  "areaServed": {"@type": "Country", "name": "Slovenija"},
+  "availableLanguage": ["sl", "en"],
+  "provider": {"@type": "Organization", "name": "RTD Solutions", "url": "https://rtdsolutions.si/", "email": "info@rtdsolutions.si"},
+  "offers": [
+    {"@type": "Offer", "name": "Povzetek za 5 vprašanj", "price": "0", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Celotno poročilo", "price": "190", "priceCurrency": "EUR", "valueAddedTaxIncluded": false},
+    {"@type": "Offer", "name": "Mesečno spremljanje", "priceCurrency": "EUR", "valueAddedTaxIncluded": false,
+     "priceSpecification": {"@type": "UnitPriceSpecification", "price": "29", "priceCurrency": "EUR", "unitCode": "MON", "valueAddedTaxIncluded": false}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Je to isto kot SEO?", "acceptedAnswer": {"@type": "Answer", "text": "Delno. Pri SEO se borite za mesto na seznamu zadetkov. AI asistent napiše en odgovor in v njem imenuje nekaj podjetij. Ali ste med njimi, je odvisno od tega, kaj o vas piše na drugih straneh, kako jasno je napisana vaša stran in ali jo asistent sploh lahko prebere. Temu se reče tudi GEO, optimizacija za generativne iskalnike."}},
+    {"@type": "Question", "name": "Ali lahko zagotovite, da vas bo ChatGPT priporočil?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Tega ne more zagotoviti nihče. Odgovori se spreminjajo od vprašanja do vprašanja in od tedna do tedna. Izmerimo, kje ste, pokažemo, kaj popraviti, in vsak mesec izmerimo, ali vas asistenti imenujejo pogosteje."}},
+    {"@type": "Question", "name": "Ali pišete lažne ocene ali prikrite objave?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Ne pišemo lažnih ocen, ne objavljamo prikritih oglasov in ne ustvarjamo lažnih profilov. Popravki so vaša lastna vsebina, vpisi v prave imenike in jasni podatki na vaši strani."}},
+    {"@type": "Question", "name": "Kaj pa oglasi v ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "ChatGPT od avgusta 2026 v EU prikazuje oglase pod odgovori, uporabnikom brezplačne različice. Za večino malih podjetij je bolje najprej doseči, da vas asistent omeni sam. Če razmišljate o oglasih, vam na podlagi meritve povemo, ali se vam splačajo."}},
+    {"@type": "Question", "name": "Kdo opravi pregled?", "acceptedAnswer": {"@type": "Answer", "text": "Meritve in osnutke pripravimo z orodji umetne inteligence. Celotno poročilo pred pošiljanjem preveri človek."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Preskoči na vsebino</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+    <a class="lang" href="ai-visibility.html" lang="en" hreflang="en">English</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero slim">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Vidni v AI · pregled za podjetja</p>
+      <h1>Ali vas ChatGPT pozna?</h1>
+      <p class="lead">Kupci vse pogosteje najprej vprašajo ChatGPT ali Perplexity, šele nato Google. AI asistentom
+        postavimo vprašanja, ki jih postavljajo vaši kupci, in vam pokažemo, koga imenujejo, na katere vire se
+        opirajo in ali omenijo vas. Povzetek za 5 vprašanj je brezplačen.</p>
+      <p class="small">Raziskava G2 (2026, 1.076 kupcev): 51 % kupcev poslovne programske opreme iskanje pogosteje
+        začne v AI klepetalniku kot v Googlu, 33 % pa jih je kupilo pri ponudniku, za katerega so prvič slišali v
+        klepetalniku. <a href="https://sell.g2.com/2026-buyer-behavior-report">Vir</a></p>
+    </div>
+    <form class="req-form" id="f" novalidate>
+      <h2>Zahtevajte brezplačen povzetek</h2>
+      <div class="field">
+        <label for="url">Spletna stran podjetja</label>
+        <input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.vase-podjetje.si" required aria-describedby="url-err">
+        <p class="err" id="url-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="co">Podjetje <span class="small">(neobvezno)</span></label>
+        <input id="co" name="co" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="what">Kaj prodajate in komu? <span class="small">(neobvezno)</span></label>
+        <textarea id="what" name="what" aria-describedby="what-help"></textarea>
+        <p class="help" id="what-help">Na primer: lasersko rezanje pločevine za podjetja na Štajerskem. Iz tega
+          sestavimo vprašanja, ki jih postavljajo vaši kupci.</p>
+      </div>
+      <button class="btn" type="submit">Pripravi e-sporočilo z zahtevo</button>
+      <p class="small" style="margin:10px 0 0">Gumb odpre vaš e-poštni program s pripravljenim sporočilom na
+        info@rtdsolutions.si. Povzetek pošljemo v 3 delovnih dneh na naslov, s katerega pišete. Vaših podatkov
+        ne uporabimo za nič drugega. En brezplačen povzetek na podjetje; zahteve obdelamo po vrstnem redu
+        prejema.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Kaj preverimo</h2>
+    <div class="grid2">
+      <div class="card"><h3>Koga asistenti imenujejo</h3>
+        <p>Za vprašanja vaših kupcev zapišemo, katera podjetja imenujejo ChatGPT, Perplexity in drugi asistenti in ali je med njimi
+          vaše.</p></div>
+      <div class="card"><h3>Na katere vire se opirajo</h3>
+        <p>Imeniki, mediji, primerjalniki, strani konkurentov. Tam, kjer asistenti iščejo odgovore, morate biti
+          tudi vi.</p></div>
+      <div class="card"><h3>Ali vašo stran sploh lahko preberejo</h3>
+        <p>Ali vaša stran AI pajkom dovoli dostop, ali ima strukturirane podatke in ali so ključna dejstva
+          (storitve, lokacija, reference, cene) zapisana v besedilu, ne le v slikah in PDF-jih.</p></div>
+      <div class="card"><h3>Napačna dejstva o vas</h3>
+        <p>Ali asistenti o vas trdijo kaj napačnega: zaprto podjetje, stari izdelki, napačna lokacija ali
+          napačne cene.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="cena">
+  <div class="wrap">
+    <h2>Kaj dobite</h2>
+    <div class="prices">
+      <div class="card">
+        <h3>Povzetek</h3>
+        <p class="price">0 EUR</p>
+        <p>5 vprašanj vaših kupcev, ChatGPT in Perplexity: kdo je imenovan, ali ste med njimi in trije
+          najpomembnejši popravki. V 3 delovnih dneh.</p>
+      </div>
+      <div class="card">
+        <h3>Celotno poročilo</h3>
+        <p class="price">190 EUR <small>+ DDV</small></p>
+        <p>20 vprašanj, ChatGPT, Perplexity in Claude, vsako vprašanje večkrat, ker se odgovori spreminjajo.
+          Viri, na katere se asistenti opirajo, pregled vaše strani in seznam popravkov po vrstnem redu učinka.</p>
+      </div>
+      <div class="card">
+        <h3>Mesečno spremljanje</h3>
+        <p class="price">29 EUR <small>+ DDV na mesec</small></p>
+        <p>Vsak mesec ponovimo meritev in pokažemo spremembo. Vsak mesec za vas napišemo eno stran z odgovori na
+          vprašanja kupcev, pripravljeno za vašo spletno stran. Brez vezave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Primer iz naše meritve</h2>
+    <div class="finding">
+      <p>13. 10. 2026 smo AI asistentu z iskanjem po spletu postavili šest vprašanj, kakršna postavljajo kupci.</p>
+      <p>Na vprašanje »Kdo v Sloveniji pregleda dostopnost spletne strani po ZDPSI?« ni imenoval nobenega
+        ponudnika. Pri izdelovalcih strojev po meri je imenoval podjetja, o katerih pišejo mediji in imeniki, ni
+        pa imenoval nobenega od 17 manjših slovenskih izdelovalcev, ki smo jih preverili. Pri pohištvu po meri se
+        je oprl na plačane oglasne članke na novičarskih portalih.</p>
+      <p><b>Kaj to pomeni:</b> asistenti imenujejo podjetja, o katerih piše splet. Podjetje, ki ima samo
+        predstavitveno stran, je zanje nevidno, četudi je v svoji dejavnosti najboljše.</p>
+    </div>
+    <p class="small">Ena meritev, en asistent, en poskus na vprašanje. Zato v poročilih vsako vprašanje postavimo
+      večkrat in več asistentom.</p>
+  </div>
+</section>
+
+<section class="section alt faq">
+  <div class="wrap">
+    <h2>Vprašanja</h2>
+    <h3>Je to isto kot SEO?</h3>
+    <p>Delno. Pri SEO se borite za mesto na seznamu zadetkov. AI asistent napiše en odgovor in v njem imenuje nekaj
+      podjetij. Ali ste med njimi, je odvisno od tega, kaj o vas piše na drugih straneh, kako jasno je napisana vaša
+      stran in ali jo asistent sploh lahko prebere. Temu se reče tudi GEO, optimizacija za generativne iskalnike.</p>
+    <h3>Ali lahko zagotovite, da vas bo ChatGPT priporočil?</h3>
+    <p>Ne. Tega ne more zagotoviti nihče. Odgovori se spreminjajo od vprašanja do vprašanja in od tedna do tedna.
+      Izmerimo, kje ste, pokažemo, kaj popraviti, in vsak mesec izmerimo, ali vas asistenti imenujejo pogosteje.</p>
+    <h3>Ali pišete lažne ocene ali prikrite objave?</h3>
+    <p>Ne. Ne pišemo lažnih ocen, ne objavljamo prikritih oglasov in ne ustvarjamo lažnih profilov. Popravki so vaša
+      lastna vsebina, vpisi v prave imenike in jasni podatki na vaši strani.</p>
+    <h3>Kaj pa oglasi v ChatGPT?</h3>
+    <p>ChatGPT od avgusta 2026 v EU prikazuje oglase pod odgovori, uporabnikom brezplačne različice. Za večino malih
+      podjetij je bolje najprej doseči, da vas asistent omeni sam. Če razmišljate o oglasih, vam na podlagi meritve
+      povemo, ali se vam splačajo.</p>
+    <h3>Kdo opravi pregled?</h3>
+    <p>Meritve in osnutke pripravimo z orodji umetne inteligence. Celotno poročilo pred pošiljanjem preveri človek.</p>
+    <p class="also"><a href="pripravljeni-na-ai.html">Imate spletno trgovino? Pregled vidnosti v AI in dostopnosti
+      skupaj →</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+      <p>Vidnost v AI, dostopnost spletnih trgovin, skladnost strojev.</p></div>
+    <div><p><a href="mailto:info@rtdsolutions.si">info@rtdsolutions.si</a></p>
+      <p><a href="ai-visibility.html" lang="en">English</a></p></div>
+  </div>
+</footer>
+
+<script>
+const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
+f.addEventListener("submit", e => {
+  e.preventDefault();
+  let v = url.value.trim();
+  if (v && !/^https?:\/\//i.test(v)) v = "https://" + v;
+  let host = "";
+  try { host = new URL(v).hostname; } catch (_) {}
+  if (!host || !host.includes(".")) { err.textContent = "Vpišite spletno stran podjetja, na primer https://www.vase-podjetje.si"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
+  err.textContent = ""; url.removeAttribute("aria-invalid");
+  const co = document.getElementById("co").value.trim(), what = document.getElementById("what").value.trim();
+  const body = `Pozdravljeni,\n\nprosim za brezplačen povzetek vidnosti v AI asistentih za:\n${v}\n`
+    + (co ? `\nPodjetje: ${co}\n` : "") + (what ? `\nKaj prodajamo in komu: ${what}\n` : "");
+  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("Vidnost v AI: " + host)}&body=${encodeURIComponent(body)}`;
+});
+</script>
+</body>
+</html>

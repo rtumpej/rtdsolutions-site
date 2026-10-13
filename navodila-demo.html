@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex">
+<title>TT-600 navodila (primer) | ManualKeep</title>
+<meta name="description" content="Primer digitalnih navodil za uporabo po Uredbi (EU) 2023/1230: QR koda, zgodovina izdaj, prenos PDF, digitalna izjava o skladnosti, papirna kopija na zahtevo. Izmišljen stroj.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+.demo-banner { background: #fff4e5; border-bottom: 1px solid #f3d3a8; color: #6b3d0f; font-size: 15px; padding: 10px 0; }
+.demo-banner a { color: #6b3d0f; font-weight: 600; }
+.mhead { padding: 32px 0 8px; }
+.mgrid { display: grid; grid-template-columns: 1fr 180px; gap: 28px; align-items: start; }
+@media (max-width: 640px) { .mgrid { grid-template-columns: 1fr; } .qrbox { max-width: 180px; } }
+.mhead h1 { font-size: clamp(26px, 3.6vw, 38px); margin: 0 0 8px; }
+.kv { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; margin: 14px 0 0; font-size: 15px; }
+.kv dt { color: var(--muted); } .kv dd { margin: 0; color: var(--ink); min-width: 0; overflow-wrap: anywhere; }
+.qrbox { border: 1px solid var(--line); border-radius: 12px; padding: 12px; background: #fff; text-align: center; font-size: 13px; color: var(--muted); }
+.qrbox img { width: 100%; height: auto; display: block; }
+.panel { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 20px 22px; margin: 18px 0; }
+.panel h2 { font-size: 20px; margin: 0 0 10px; }
+.cur { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.tag { font-size: 13px; font-weight: 700; color: #1f5f3a; background: #e7f5ec; border-radius: 999px; padding: 3px 10px; }
+.langs { font-size: 15px; color: var(--muted); margin: 10px 0 0; }
+table.hist { width: 100%; border-collapse: collapse; font-size: 15px; }
+table.hist th, table.hist td { text-align: left; padding: 9px 8px; border-top: 1px solid var(--line); vertical-align: top; }
+table.hist th { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; border-top: 0; }
+.tbl { overflow-x: auto; }
+.safety ol { margin: 0; padding-left: 22px; } .safety li { margin-bottom: 6px; color: var(--ink); }
+.doc-dl { font-size: 15px; } .doc-dl p { margin: 4px 0; }
+.small { font-size: 14px; color: var(--muted); }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+@media print { .top, .demo-banner, .foot, .noprint { display: none !important; } .panel { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Preskoči na vsebino</a>
+<div class="demo-banner noprint"><div class="wrap">Primer: tako kupec vidi navodila, ko skenira QR kodo na stroju. Stroj in proizvajalec sta izmišljena.
+  <a href="digitalna-navodila.html">Kaj je ManualKeep?</a></div></div>
+<header class="top">
+  <div class="wrap bar">
+    <span class="logo"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#5b6676"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Primer <b>Stroji</b></span></span>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="mhead mgrid">
+    <div>
+      <p class="eyebrow">Navodila za uporabo</p>
+      <h1>Tračni transporter TT-600</h1>
+      <dl class="kv">
+        <dt>Proizvajalec</dt><dd>Primer Stroji d.o.o., Industrijska cesta 1, 1000 Ljubljana</dd>
+        <dt>Kontakt</dt><dd>www.primer-stroji.example · servis@primer-stroji.example</dd>
+        <dt>Serijske številke</dt><dd>TT6-27001 in naprej (leto izdelave 2027)</dd>
+      </dl>
+    </div>
+    <div class="qrbox"><img src="qr-navodila-demo.svg" alt="QR koda, ki odpre to stran" width="160" height="160">QR koda s tipske ploščice</div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-cur">
+    <h2 id="h-cur">Veljavna izdaja</h2>
+    <div class="cur">
+      <span class="tag">Izdaja 2.1 · 20. 1. 2027</span>
+      <span class="small">velja za serijske številke od TT6-27001</span>
+    </div>
+    <div class="actions noprint" style="margin-top:14px">
+      <a class="btn" href="demo/TT-600-navodila-2.1.pdf" download>Prenesi PDF</a>
+      <a class="btn ghost" href="demo/TT-600-navodila-2.1.pdf" target="_blank" rel="noopener">Odpri</a>
+      <button class="btn ghost" type="button" onclick="window.print()">Natisni to stran</button>
+    </div>
+    <p class="langs">Jeziki: slovenščina · English · Deutsch <span class="small">(v primeru je na voljo samo slovenščina)</span></p>
+    <p class="small">Nasvet: PDF shranite na telefon ali računalnik, da ga imate tudi ob okvari stroja ali brez povezave.</p>
+  </section>
+
+  <section class="panel safety" aria-labelledby="h-safe">
+    <h2 id="h-safe">Varnostne informacije za zagon in uporabo</h2>
+    <ol>
+      <li>Pred vsakim posegom stroj izklopite z glavnim stikalom in ga zaklenite z osebno ključavnico.</li>
+      <li>Ne segajte med trak in valje, dokler se trak premika. Varoval ne odstranjujte med obratovanjem.</li>
+      <li>Tipka za zasilni izklop je na obeh koncih transporterja. Preverite jo na začetku vsake izmene.</li>
+      <li>Daljinski dostop za servis vklopi samo pooblaščena oseba na upravljalni plošči (meni Servis).</li>
+    </ol>
+  </section>
+
+  <section class="panel" aria-labelledby="h-hist">
+    <h2 id="h-hist">Zgodovina izdaj</h2>
+    <p class="small">Vsaka izdaja ostane dostopna. Poiščite izdajo, ki velja za serijsko številko vašega stroja.</p>
+    <div class="tbl"><table class="hist">
+      <thead><tr><th scope="col">Izdaja</th><th scope="col">Datum</th><th scope="col">Serijske številke</th><th scope="col">Sprememba</th></tr></thead>
+      <tbody>
+        <tr><td>2.1</td><td>20. 1. 2027</td><td>od TT6-27001</td><td>Uskladitev z Uredbo (EU) 2023/1230; poglavje o daljinskem dostopu in dnevniku posegov</td></tr>
+        <tr><td>2.0</td><td>3. 6. 2025</td><td>TT6-25001 do TT6-26420</td><td>Varnostna programska oprema 2.0, nova upravljalna plošča</td></tr>
+        <tr><td>1.4</td><td>12. 2. 2024</td><td>TT6-24001 do TT6-24990</td><td>Popravek tabele vzdrževanja</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="panel doc-dl" aria-labelledby="h-doc">
+    <h2 id="h-doc">Izjava EU o skladnosti</h2>
+    <p><strong>Primer Stroji d.o.o.</strong> izjavlja na lastno odgovornost, da je tračni transporter TT-600,
+      serijske številke od TT6-27001, skladen z Uredbo (EU) 2023/1230.</p>
+    <p class="small">V primeru je izjava skrajšana. V storitvi je tu celotna izjava po Prilogi V, del A, dostopna
+      vsaj 10 let po dajanju stroja na trg (10(8) člen).</p>
+  </section>
+
+  <section class="panel noprint" aria-labelledby="h-paper">
+    <h2 id="h-paper">Papirna kopija navodil</h2>
+    <p>Ste ob nakupu zahtevali papirno kopijo? Proizvajalec jo pošlje brezplačno v enem mesecu (10(7) člen).</p>
+    <a class="btn ghost" href="mailto:info@rtdsolutions.si?subject=Primer%3A%20zahteva%20za%20papirno%20kopijo%20TT-600&amp;body=Serijska%20%C5%A1tevilka%3A%0ANaslov%20za%20dostavo%3A%0A">Zahtevaj papirno kopijo</a>
+    <p class="small">V tem primeru gre zahteva k nam (RTD Solutions), v storitvi pa neposredno proizvajalcu.</p>
+  </section>
+
+  <p class="small" style="margin:24px 0 40px">Dostopno najmanj do 20. 1. 2037 · zadnja sprememba 20. 1. 2027 ·
+    gostuje <a href="digitalna-navodila.html">ManualKeep</a> (RTD Solutions), zrcalna kopija v EU.</p>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><p>Primer storitve ManualKeep. Stroj, proizvajalec in podatki so izmišljeni.</p></div>
+    <div><p><a href="digitalna-navodila.html">Za proizvajalce strojev</a></p></div>
+  </div>
+</footer>
+</body>
+</html>

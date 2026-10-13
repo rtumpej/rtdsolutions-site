@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Uredba o strojih 2027 — samopregled v 3 minutah | RTD Solutions</title>
+<meta name="description" content="Brezplačen samopregled: kaj Uredba (EU) 2023/1230 o strojih od 20. januarja 2027 spremeni za vaš stroj. 15 vprašanj, seznam vrzeli s sklici na člene, brez registracije.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero.slim { padding: 48px 0 40px; }
+.hero.slim h1 { font-size: clamp(28px, 4vw, 44px); max-width: 22ch; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.check { max-width: 820px; }
+.q { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 18px 20px; margin: 0 0 14px; min-width: 0; }
+.q legend { float: left; width: 100%; padding: 0; margin: 0 0 6px; font-weight: 650; color: var(--ink); font-size: 17px; line-height: 1.45; }
+.q legend .n { color: #9a4a0c; margin-right: 6px; }
+.q .hint { clear: both; margin: 0 0 12px; font-size: 15px; color: var(--muted); }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; clear: both; }
+.opts label { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; cursor: pointer; font-size: 15px; color: var(--ink); background: var(--soft); }
+.opts input { accent-color: var(--navy); width: 18px; height: 18px; margin: 0; }
+.opts label:has(input:checked) { border-color: var(--navy); background: var(--soft2); font-weight: 600; }
+.group-h { font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 30px 0 12px; }
+.bar-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 24px 0 0; }
+.progress { font-size: 15px; color: var(--muted); }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; }
+#result { scroll-margin-top: 80px; }
+#result:focus { outline: none; }
+.summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 24px; }
+.summary div { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: #fff; }
+.summary b { display: block; font-size: 30px; line-height: 1.1; color: var(--ink); }
+.summary span { font-size: 14px; color: var(--muted); }
+@media (max-width: 560px) { .summary { grid-template-columns: 1fr; } }
+.gap { border: 1px solid var(--line); border-left: 5px solid var(--sev); border-radius: 12px; background: #fff; padding: 16px 18px; margin: 0 0 12px; }
+.gap h3 { font-size: 18px; margin: 0 0 6px; }
+.gap p { margin: 0 0 8px; font-size: 16px; }
+.gap .ref { font-size: 14px; color: var(--muted); margin: 0; }
+.sev { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--sev); margin: 0 0 4px; }
+.s1 { --sev: #b42318; } .s2 { --sev: #b54708; } .s3 { --sev: #1c4d86; } .s0 { --sev: #2e7d4f; }
+.offer { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 28px 0 0; }
+@media (max-width: 760px) { .offer { grid-template-columns: 1fr; } }
+.offer .card h3 { margin-top: 0; }
+.card .price, .price { font-size: 26px; font-weight: 800; color: var(--ink); margin: 4px 0 8px; }
+.price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.note { font-size: 14px; color: var(--muted); }
+[hidden] { display: none !important; }
+@media print { .top, .foot, form, .offer, .bar-actions, .hero { display: none !important; } .gap { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Preskoči na vsebino</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero slim">
+  <div class="wrap">
+    <p class="eyebrow">Uredba (EU) 2023/1230 · velja od 20. januarja 2027</p>
+    <h1>Kaj nova uredba o strojih spremeni za vaš stroj?</h1>
+    <p class="lead">15 vprašanj, takoj seznam vrzeli s sklici na člene uredbe in predlogom, kaj narediti.
+      Brez registracije: odgovori ostanejo v vašem brskalniku, nikamor jih ne pošljemo.</p>
+    <ul class="meta">
+      <li class="pill">približno 3 minute</li>
+      <li class="pill">prehodnega obdobja ni</li>
+      <li class="pill">besedilo preverjeno na EUR-Lex</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" style="padding-top:40px">
+  <div class="wrap check">
+    <form id="f" novalidate>
+      <div id="qs"></div>
+      <div class="bar-actions">
+        <button class="btn" type="submit">Pokaži rezultat</button>
+        <span class="progress" id="prog" aria-live="polite"></span>
+      </div>
+    </form>
+
+    <div id="result" hidden tabindex="-1">
+      <h2>Vaš rezultat</h2>
+      <div class="summary" id="sum"></div>
+      <div id="gaps"></div>
+      <div class="bar-actions">
+        <button class="btn ghost" type="button" id="print">Natisni ali shrani kot PDF</button>
+        <button class="btn ghost" type="button" id="again">Spremeni odgovore</button>
+      </div>
+
+      <div class="offer">
+        <div class="card">
+          <h3>Komplet »Stroji 2027«</h3>
+          <p class="price">149 EUR <small>+ DDV</small></p>
+          <p>Za podjetja, ki dokumentacijo uredijo sama: kontrolni seznam vrzeli, struktura posodobljene
+            ocene tveganja, predloga izjave EU o skladnosti po novi uredbi, kontrolni seznam za digitalna
+            navodila in besedila za kibernetsko zaščito ter beleženje posegov. Pripravil inženir strojništva.</p>
+          <p class="note">Komplet bo na voljo predvidoma do 16. novembra 2026. Rezervacija ni zavezujoča in
+            ne vključuje plačila; ceno potrdimo ob izidu.</p>
+          <a class="btn" id="mk1" href="#">Rezerviraj komplet</a>
+        </div>
+        <div class="card">
+          <h3>Pregled dokumentacije enega stroja</h3>
+          <p class="price">290 EUR <small>+ DDV</small></p>
+          <p>Pošljete tehnično dokumentacijo enega stroja; v 5 delovnih dneh dobite seznam vrzeli z oceno
+            resnosti, predlogi rešitev in osnutki besedil za hitre popravke. Vsak pregled potrdi inženir
+            strojništva.</p>
+          <p class="note">Ocenjevanja skladnosti ne izvajamo; izjavo o skladnosti podpiše proizvajalec.</p>
+          <a class="btn ghost" id="mk2" href="#">Vprašajte za pregled</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fine">
+  <div class="wrap">
+    <h2>Pomembno</h2>
+    <p>Samopregled je pomoč pri pripravi, ne ocena skladnosti in ne pravni nasvet. Za skladnost stroja
+      odgovarja proizvajalec. Sklici veljajo za Uredbo (EU) 2023/1230 v besedilu z EUR-Lex, z datumom
+      začetka uporabe po popravku iz julija 2023 (20. januar 2027). Stroji, dani na trg pred tem datumom
+      po Direktivi 2006/42/ES, ostanejo skladni, razen če jih kdo bistveno spremeni.</p>
+    <p>Pri pripravi vsebine uporabljamo orodja umetne inteligence; vsebino je preveril inženir strojništva.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+      <p>Dokumentacija za javna naročila, dostopnost in skladnost strojev.</p></div>
+    <div><p><a href="mailto:info@rtdsolutions.si">info@rtdsolutions.si</a></p></div>
+  </div>
+</footer>
+
+<script>
+const EMAIL = "info@rtdsolutions.si";
+// Each question: id, group, text, hint, and gap(answer) -> list of findings.
+// Severity: 1 critical (third-party assessment, long lead time), 2 important, 3 to align, 0 info.
+const Q = [
+  { id: "trg", g: "Ali vas uredba zadeva",
+    t: "Ali boste po 20. januarju 2027 dajali na trg ali v uporabo nove stroje, povezane izdelke ali delno dokončane stroje?",
+    gap: a => a === "ne" ? [{ s: 0, h: "Za stroje, dane na trg pred 20. 1. 2027, velja še direktiva",
+      p: "Stroji, ki jih daste na trg do 19. januarja 2027 po Direktivi 2006/42/ES, ostanejo skladni. Uredba velja za vsak stroj, ki ga daste na trg od 20. januarja 2027, tudi za model, ki ga prodajate že leta, in za stroj, ki ga bistveno spremenite.",
+      r: "52. člen (1. odstavek) in 54. člen (s popravkom iz 2023)" }] : [] },
+  { id: "partA", g: "Kategorija stroja",
+    t: "Ali je vaš izdelek na seznamu Priloge I, del A?",
+    h: "Snemljive mehanske transmisijske naprave in njihova varovala, dvižne naprave za servisiranje vozil, prenosni pritrjevalni in drugi udarni stroji na kartuše, varnostne komponente ali stroji, pri katerih varnostno funkcijo zagotavlja sistem s samorazvijajočim se vedenjem (strojno učenje).",
+    gap: a => a !== "ne" ? [{ s: 1, h: "Ocena skladnosti s priglašenim organom je obvezna",
+      p: "Za kategorije iz dela A lastni nadzor (modul A) ni več mogoč, tudi če uporabite harmonizirane standarde. Potrebujete pregled tipa EU (modul B + C), popolno zagotavljanje kakovosti (H) ali preverjanje enote (G). Priglašene organe rezervirajte zgodaj.",
+      r: "25(2) člen, Priloga I, del A" }] : [] },
+  { id: "partB", g: "Kategorija stroja",
+    t: "Ali je vaš izdelek na seznamu Priloge I, del B?",
+    h: "Na primer krožne in tračne žage za les ali meso, skobeljni stroji za les, stiskalnice za hladno obdelavo kovin z ročnim nalaganjem, stroji za brizganje plastike ali gume z ročnim nalaganjem, naprave za dvigovanje oseb z nevarnostjo padca z višine nad 3 m, zaščitne naprave za zaznavanje oseb, logične enote za varnostne funkcije, ROPS in FOPS.",
+    gap: a => a !== "ne" ? [{ s: 2, h: "Lastni nadzor le ob celoviti uporabi standardov",
+      p: "Modul A je dovoljen samo, če stroj ustreza harmoniziranim standardom ali skupnim specifikacijam za to kategorijo, ki pokrijejo vse bistvene zahteve. Sicer potrebujete priglašeni organ. Preverite, kateri standardi so objavljeni po novi uredbi.",
+      r: "25(3) člen, Priloga I, del B" }] : [] },
+  { id: "sw", g: "Programska oprema in povezljivost",
+    t: "Ali varnostne funkcije stroja izvaja programska oprema (PLC, varnostni krmilnik, vgrajena programska oprema)?",
+    gap: a => a !== "ne" ? [{ s: 2, h: "Zaščita in identifikacija varnostne programske opreme",
+      p: "Programsko opremo in podatke, ključne za skladnost, označite in zaščitite pred nenamerno ali namerno okvaro. Stroj mora ves čas v lahko dostopni obliki pokazati, katera varnostna programska oprema je nameščena, in beležiti dokaze o posegih vanjo. Izvorno kodo ali programsko logiko varnostne programske opreme morate na utemeljeno zahtevo predložiti organu.",
+      r: "Priloga III, 1.1.9; Priloga IV, del A, točka (m); 10(3) člen" }] : [] },
+  { id: "net", g: "Programska oprema in povezljivost",
+    t: "Ali ima stroj daljinski dostop ali povezavo z drugimi napravami ali omrežjem?",
+    h: "Oddaljeno vzdrževanje, VPN, povezava z MES ali SCADA, IoT, mobilna aplikacija.",
+    gap: a => a !== "ne" ? [{ s: 2, h: "Varnost pri povezavi drugih naprav in pred zlorabami",
+      p: "Povezava druge naprave, tudi na daljavo, ne sme povzročiti nevarnega stanja. Krmilni sistem mora prenesti razumno predvidljive zlonamerne poskuse tretjih oseb. Strojna oprema, prek katere je mogoč dostop do kritične programske opreme, mora biti zaščitena in beležiti posege. Za izdelke z digitalnimi elementi preverite še Uredbo o kibernetski odpornosti (CRA), ki se v celoti uporablja od 11. 12. 2027.",
+      r: "Priloga III, 1.1.9 in 1.2.1(a)" }] : [] },
+  { id: "upd", g: "Programska oprema in povezljivost",
+    t: "Ali po prodaji nalagate posodobitve varnostne programske opreme (na daljavo ali na terenu)?",
+    gap: a => a !== "ne" ? [{ s: 2, h: "Sledilni dnevnik posegov in verzij za 5 let",
+      p: "Stroj mora omogočati sledilni dnevnik podatkov o posegih in o verzijah varnostne programske opreme, naložene po dajanju na trg, za 5 let po nalaganju. Uvedite postopek za verzije in posodobitve.",
+      r: "Priloga III, 1.2.1(f) in 1.1.9" }] : [] },
+  { id: "ml", g: "Programska oprema in povezljivost",
+    t: "Ali stroj uporablja strojno učenje ali drugo samorazvijajoče se vedenje, ki vpliva na gibanje ali varnost?",
+    gap: a => a !== "ne" ? [{ s: 1, h: "Posebne zahteve za avtonomno in učeče se vedenje",
+      p: "Stroj ne sme izvajati dejanj zunaj določenega delovnega in gibalnega prostora; zapise o varnostnih odločitvah programske opreme je treba hraniti 1 leto; stroj mora biti vedno mogoče popraviti. Vmesnik mora biti prilagojen operaterjem, stroj pa mora razumljivo sporočati načrtovana dejanja. Če tak sistem zagotavlja varnostno funkcijo, sodi v Prilogo I, del A (priglašeni organ).",
+      r: "Priloga III, 1.2.1 in 1.1.6(f)(g); Priloga I, del A, točki 5 in 6" }] : [] },
+  { id: "dig", g: "Navodila in dokumenti",
+    t: "Ali boste navodila za uporabo dajali v digitalni obliki (PDF, spletna stran, QR koda)?",
+    gap: a => a === "da" ? [{ s: 2, h: "Pogoji za digitalna navodila", demo: true,
+      p: "Na stroju (ali na embalaži oziroma v spremnem dokumentu) označite, kako do navodil. Navodila morajo omogočati tiskanje, prenos in shranjevanje, da so dostopna tudi ob okvari stroja. Na spletu morajo biti v pričakovani življenjski dobi stroja in vsaj 10 let po dajanju na trg. Če kupec ob nakupu zahteva papirno kopijo, jo dobi brezplačno v enem mesecu.",
+      r: "10(7) člen" }] : a === "nevem" ? [{ s: 0, h: "Digitalna navodila so dovoljena, s pogoji", demo: true,
+      p: "Od 20. 1. 2027 smete navodila dajati digitalno, če so dostopna prek oznake na stroju, jih je mogoče natisniti in shraniti ter so na spletu vsaj 10 let. To prihrani tisk in prevode na papirju.",
+      r: "10(7) člen" }] : [] },
+  { id: "laik", g: "Navodila in dokumenti",
+    t: "Ali lahko vaš stroj razumno predvidljivo uporabljajo tudi neprofesionalni uporabniki, četudi jim ni namenjen?",
+    gap: a => a !== "ne" ? [{ s: 3, h: "Varnostne informacije na papirju",
+      p: "Varnostne informacije, ključne za zagon in varno uporabo, morate dati v papirni obliki, tudi če so navodila digitalna.",
+      r: "10(7) člen" }] : [] },
+  { id: "doc", g: "Navodila in dokumenti",
+    t: "Ali bo izjava EU o skladnosti dostopna prek spletnega naslova ali QR kode namesto priložene kopije?",
+    gap: a => a === "da" ? [{ s: 3, h: "Digitalna izjava o skladnosti: 10 let na spletu",
+      p: "Spletni naslov ali strojno berljivo kodo navedite v navodilih in v informacijah iz Priloge III. Digitalna izjava mora biti na spletu v pričakovani življenjski dobi stroja in vsaj 10 let po dajanju na trg.",
+      r: "10(8) člen" }] : [] },
+  { id: "kontakt", g: "Navodila in dokumenti",
+    t: "Ali na stroju poleg imena in poštnega naslova navajate tudi spletno stran, e-pošto ali drug digitalni kontakt?",
+    gap: a => a !== "da" ? [{ s: 3, h: "Kontaktni podatki na stroju",
+      p: "Na stroju (ali, kjer to ni mogoče, na embalaži ali v spremnem dokumentu) navedite ime, registrirano trgovsko ime ali znamko, poštni naslov ter spletno stran, e-pošto ali drug digitalni kontakt. Naslov mora biti ena kontaktna točka.",
+      r: "10(6) člen" }] : [] },
+  { id: "mod", g: "Vaša vloga",
+    t: "Ali predelujete, nadgrajujete ali povezujete obstoječe stroje (retrofit, linije), tudi samo s spremembo programske opreme?",
+    gap: a => a !== "ne" ? [{ s: 2, h: "Bistvena sprememba vas naredi za proizvajalca",
+      p: "Fizična ali digitalna sprememba, ki je proizvajalec ni predvidel in ki ustvari novo nevarnost ali poveča tveganje, je bistvena sprememba. Kdor jo izvede, ima za spremenjeni stroj obveznosti proizvajalca: ocena skladnosti, izjava EU o skladnosti, oznaka CE. Določite, kdaj vaši projekti prestopijo to mejo, in to zapišite v oceno tveganja.",
+      r: "3(16) in 18. člen" }] : [] },
+  { id: "delno", g: "Vaša vloga",
+    t: "Ali dobavljate delno dokončane stroje za vgradnjo v druge stroje?",
+    gap: a => a !== "ne" ? [{ s: 3, h: "Delno dokončani stroji: nova pravila",
+      p: "Delno dokončan stroj mora izpolnjevati relevantne bistvene zahteve. Potrebujete tehnično dokumentacijo po Prilogi IV, del B, izjavo EU o vgradnji in navodila za sestavo. Dokumentacijo hranite vsaj 10 let; izvorno kodo ali programsko logiko na utemeljeno zahtevo predložite organu.",
+      r: "11. in 22. člen; Priloga IV, del B; Priloga XI" }] : [] },
+  { id: "uvoz", g: "Vaša vloga",
+    t: "Ali stroje uvažate iz držav zunaj EU ali tuje stroje prodajate pod svojim imenom ali znamko?",
+    gap: a => a !== "ne" ? [{ s: 2, h: "Obveznosti uvoznika ali proizvajalca",
+      p: "Uvoznik mora preveriti, da je proizvajalec opravil ugotavljanje skladnosti in pripravil dokumentacijo. Kdor stroj da na trg pod svojim imenom ali znamko ali ga spremeni tako, da to lahko vpliva na skladnost, ima obveznosti proizvajalca.",
+      r: "13. in 17. člen" }] : [] },
+  { id: "tehdok", g: "Dokumentacija",
+    t: "Ali imate za vsak stroj tehnično dokumentacijo z oceno tveganja, posodobljeno za nove bistvene zahteve (kibernetska zaščita, avtonomija, psihične obremenitve operaterja)?",
+    gap: a => a !== "da" ? [{ s: 2, h: "Posodobite oceno tveganja in tehnično dokumentacijo",
+      p: "Tehnična dokumentacija po Prilogi IV, del A mora pokriti nove bistvene zahteve iz Priloge III. Ocena tveganja mora zajeti tudi zaščito pred okvaro programske opreme in psihične obremenitve operaterja. Dokumentacijo in izjavo hranite vsaj 10 let po dajanju na trg.",
+      r: "Priloga IV, del A; Priloga III, 1.1.6, 1.1.9, 1.2.1; 10(3) člen" }] : [] },
+];
+const BASE = [{ s: 3, h: "Nova izjava EU o skladnosti za vsak stroj",
+  p: "Vsak stroj, dan na trg od 20. 1. 2027, potrebuje izjavo EU o skladnosti po Prilogi V, del A s sklicem na Uredbo (EU) 2023/1230. Prehodnega obdobja ni.",
+  r: "21. člen; Priloga V, del A; 54. člen" }];
+const SEV = { 1: "Kritično", 2: "Pomembno", 3: "Za uskladitev", 0: "Informacija" };
+const ANS = [["da", "Da"], ["ne", "Ne"], ["nevem", "Ne vem"]];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+let html = "", lastG = "";
+Q.forEach((q, i) => {
+  if (q.g !== lastG) { html += `<h2 class="group-h">${esc(q.g)}</h2>`; lastG = q.g; }
+  html += `<fieldset class="q"><legend><span class="n">${i + 1}.</span>${esc(q.t)}</legend>` +
+    (q.h ? `<p class="hint" id="h-${q.id}">${esc(q.h)}</p>` : "") +
+    `<div class="opts">` + ANS.map(([v, l]) =>
+      `<label><input type="radio" name="${q.id}" value="${v}"${q.h ? ` aria-describedby="h-${q.id}"` : ""}> ${l}</label>`).join("") +
+    `</div></fieldset>`;
+});
+document.getElementById("qs").innerHTML = html;
+
+const form = document.getElementById("f");
+const prog = document.getElementById("prog");
+function answers() { return Object.fromEntries(Q.map(q => [q.id, (form.elements[q.id] || {}).value || ""])); }
+function updateProg() { const n = Object.values(answers()).filter(Boolean).length; prog.textContent = `Odgovorjenih ${n} od ${Q.length}. Neodgovorjeno štejemo kot »Ne vem«.`; }
+form.addEventListener("change", updateProg); updateProg();
+
+function mailto(subject, body) { return `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; }
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const a = answers();
+  let found = [];
+  Q.forEach(q => q.gap(a[q.id] || "nevem").forEach(g => found.push({ ...g, q: q.id })));
+  if (a.trg !== "ne") found.push(...BASE);
+  found.sort((x, y) => (x.s || 9) - (y.s || 9));
+  const cnt = s => found.filter(g => g.s === s).length;
+  document.getElementById("sum").innerHTML =
+    `<div><b>${cnt(1)}</b><span>kritičnih (priglašeni organ, dolgi roki)</span></div>` +
+    `<div><b>${cnt(2)}</b><span>pomembnih</span></div>` +
+    `<div><b>${cnt(3)}</b><span>za uskladitev</span></div>`;
+  document.getElementById("gaps").innerHTML = found.map(g =>
+    `<article class="gap s${g.s}"><p class="sev">${SEV[g.s]}</p><h3>${esc(g.h)}</h3><p>${esc(g.p)}</p>` +
+    (g.demo ? `<p><a href="navodila-demo.html">Poglejte primer digitalnih navodil s QR kodo</a></p>` : "") +
+    `<p class="ref">Sklic: ${esc(g.r)}</p></article>`).join("");
+  const list = found.filter(g => g.s).map(g => `- ${SEV[g.s]}: ${g.h}`).join("\n");
+  document.getElementById("mk1").href = mailto("Rezervacija: komplet Stroji 2027",
+    `Pozdravljeni,\n\nrezerviram komplet Stroji 2027 (149 EUR + DDV, rezervacija ni zavezujoča).\n\nPodjetje:\nVrsta strojev:\n\nRezultat samopregleda:\n${list}\n`);
+  document.getElementById("mk2").href = mailto("Pregled dokumentacije stroja (Uredba 2023/1230)",
+    `Pozdravljeni,\n\nzanima nas pregled dokumentacije enega stroja (290 EUR + DDV).\n\nPodjetje:\nStroj:\n\nRezultat samopregleda:\n${list}\n`);
+  const r = document.getElementById("result");
+  r.hidden = false; r.focus(); r.scrollIntoView();
+});
+document.getElementById("print").addEventListener("click", () => window.print());
+document.getElementById("again").addEventListener("click", () => { form.scrollIntoView(); form.querySelector("input").focus(); });
+</script>
+</body>
+</html>

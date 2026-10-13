@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Gratis toegankelijkheidscheck voor uw webwinkel (EAA) | RTD Solutions</title>
+<meta name="description" content="Gratis automatische controle van de toegankelijkheid van uw webwinkel volgens de Europese toegankelijkheidswet (EAA): binnen 48 uur een samenvatting van één pagina met de ernstigste problemen. Geen plug-ins die directe naleving beloven.">
+<link rel="alternate" hreflang="nl" href="https://rtdsolutions.si/toegankelijkheid.html">
+<link rel="alternate" hreflang="sl" href="https://rtdsolutions.si/dostopnost.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero.slim { padding: 52px 0 56px; }
+.hero.slim h1 { font-size: clamp(28px, 4.2vw, 46px); max-width: 21ch; }
+.req-form { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 22px; box-shadow: var(--shadow); }
+.req-form h2 { font-size: 20px; margin: 0 0 14px; }
+.field { margin: 0 0 14px; }
+.field label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin: 0 0 6px; }
+.field input { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #b9c3d0; border-radius: 10px; color: var(--ink); background: #fff; }
+.field .help { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.err { color: #b42318; font-size: 14px; margin: 6px 0 0; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; justify-content: center; }
+.small { font-size: 14px; color: var(--muted); }
+.prices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .prices { grid-template-columns: 1fr; } }
+.card .price, .price { font-size: 28px; font-weight: 800; color: var(--ink); margin: 0 0 8px; }
+.price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Toegankelijkheidscheck voor webwinkels",
+  "serviceType": "Controle van de digitale toegankelijkheid van webwinkels (WCAG, Europese toegankelijkheidswet)",
+  "description": "Gratis automatische controle van de belangrijkste pagina's van uw webwinkel met een samenvatting van één pagina. Daarnaast een volledige controle en maandelijkse monitoring.",
+  "url": "https://rtdsolutions.si/toegankelijkheid.html",
+  "areaServed": {"@type": "Country", "name": "Nederland"},
+  "availableLanguage": ["nl", "en"],
+  "provider": {"@type": "Organization", "name": "RTD Solutions", "url": "https://rtdsolutions.si/", "email": "info@rtdsolutions.si"},
+  "offers": [
+    {"@type": "Offer", "name": "Samenvatting", "price": "0", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Volledige controle", "price": "250", "priceCurrency": "EUR", "valueAddedTaxIncluded": false},
+    {"@type": "Offer", "name": "Monitoring", "priceCurrency": "EUR", "valueAddedTaxIncluded": false,
+     "priceSpecification": {"@type": "UnitPriceSpecification", "price": "19", "priceCurrency": "EUR", "unitCode": "MON", "valueAddedTaxIncluded": false}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Biedt u een plug-in die de webwinkel meteen in orde maakt?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Plug-ins die directe naleving beloven (overlays) lossen de problemen in de code niet op, en gebruikers van schermlezers vinden ze vaak juist lastiger. Wij laten zien wat er in de code moet veranderen."}},
+    {"@type": "Question", "name": "Is de samenvatting een bewijs dat we aan de wet voldoen?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Een automatische controle vindt niet alle problemen. Hij laat de ernstigste zien en in welke volgorde u ze het best oplost."}},
+    {"@type": "Question", "name": "Wie bekijkt de resultaten?", "acceptedAnswer": {"@type": "Answer", "text": "Bij de controles gebruiken we hulpmiddelen met kunstmatige intelligentie; de volledige controle wordt door een mens nagekeken."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Naar de inhoud</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="en.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero slim">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Europese toegankelijkheidswet (EAA) · van kracht sinds 28 juni 2025</p>
+      <h1>Is uw webwinkel toegankelijk?</h1>
+      <p class="lead">Vul het adres van uw webwinkel in. We controleren automatisch de belangrijkste pagina's en sturen u
+        binnen 48 uur een samenvatting van één pagina met de ernstigste problemen, telkens met het WCAG-criterium en een
+        voorbeeld van de oplossing. Gratis.</p>
+      <p class="small">De regels gelden voor webwinkels die aan consumenten verkopen, behalve die van micro-ondernemingen
+        (minder dan 10 werknemers en een jaaromzet of balanstotaal van maximaal 2 miljoen euro). In Nederland houdt de
+        ACM toezicht.</p>
+    </div>
+    <form class="req-form" id="f" novalidate>
+      <h2>Vraag een gratis controle aan</h2>
+      <div class="field">
+        <label for="url">Adres van de webwinkel</label>
+        <input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.uw-webwinkel.nl" required aria-describedby="url-help url-err">
+        <p class="help" id="url-help">We controleren de homepage, een productpagina, de winkelwagen en de contactpagina.</p>
+        <p class="err" id="url-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="co">Bedrijf <span class="small">(optioneel)</span></label>
+        <input id="co" name="co" type="text" autocomplete="organization">
+      </div>
+      <button class="btn" type="submit">E-mail met aanvraag opstellen</button>
+      <p class="small" style="margin:10px 0 0">De knop opent uw e-mailprogramma met een kant-en-klaar bericht aan
+        info@rtdsolutions.si. We sturen de samenvatting naar het adres waarvan u mailt. We gebruiken uw gegevens
+        nergens anders voor.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="prijs">
+  <div class="wrap">
+    <h2>Wat u krijgt</h2>
+    <div class="prices">
+      <div class="card">
+        <h3 style="margin-top:0">Samenvatting</h3>
+        <p class="price">€ 0</p>
+        <p>Automatische controle van de belangrijkste pagina's; een samenvatting van één pagina met de ernstigste
+          problemen, het WCAG-criterium en een voorbeeld van de oplossing. Binnen 48 uur.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Volledige controle</h3>
+        <p class="price">€ 250 <small>excl. btw</small></p>
+        <p>Daarnaast een handmatige test van het aankoopproces met toetsenbord en schermlezer, een lijst van alle fouten
+          op volgorde van ernst met oplossingen voor uw ontwikkelaar, en een concept-toegankelijkheidsverklaring.
+          Binnen 48 uur.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Monitoring</h3>
+        <p class="price">€ 19 <small>excl. btw per maand</small></p>
+        <p>Elke maand een nieuwe controle, een lijst van nieuwe en opgeloste problemen en een bijgewerkte
+          toegankelijkheidsverklaring. Maandelijks opzegbaar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt faq">
+  <div class="wrap">
+    <h2>Vragen</h2>
+    <h3>Biedt u een plug-in die de webwinkel meteen in orde maakt?</h3>
+    <p>Nee. Plug-ins die directe naleving beloven (overlays) lossen de problemen in de code niet op, en gebruikers van
+      schermlezers vinden ze vaak juist lastiger. Wij laten zien wat er in de code moet veranderen.</p>
+    <h3>Is de samenvatting een bewijs dat we aan de wet voldoen?</h3>
+    <p>Nee. Een automatische controle vindt niet alle problemen. Hij laat de ernstigste zien en in welke volgorde u ze
+      het best oplost.</p>
+    <h3>Wie bekijkt de resultaten?</h3>
+    <p>Bij de controles gebruiken we hulpmiddelen met kunstmatige intelligentie; de volledige controle wordt door een
+      mens nagekeken.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="en.html"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+      <p>Toegankelijkheid van webwinkels, conformiteit van machines, aanbestedingen.</p></div>
+    <div><p><a href="mailto:info@rtdsolutions.si">info@rtdsolutions.si</a></p>
+      <p><a href="en.html" lang="en">English</a></p></div>
+  </div>
+</footer>
+
+<script>
+const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
+f.addEventListener("submit", e => {
+  e.preventDefault();
+  let v = url.value.trim();
+  if (v && !/^https?:\/\//i.test(v)) v = "https://" + v;
+  let host = "";
+  try { host = new URL(v).hostname; } catch (_) {}
+  if (!host || !host.includes(".")) { err.textContent = "Vul het adres van uw webwinkel in, bijvoorbeeld https://www.uw-webwinkel.nl"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
+  err.textContent = ""; url.removeAttribute("aria-invalid");
+  const co = document.getElementById("co").value.trim();
+  const body = `Goedendag,\n\ngraag ontvang ik een gratis toegankelijkheidscheck van de webwinkel:\n${v}\n` + (co ? `\nBedrijf: ${co}\n` : "");
+  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("Toegankelijkheidscheck: " + host)}&body=${encodeURIComponent(body)}`;
+});
+</script>
+</body>
+</html>

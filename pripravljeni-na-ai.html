@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Spletna trgovina, pripravljena na AI in dostopna (ZDPSI) | RTD Solutions</title>
+<meta name="description" content="En pregled, eno poročilo: dostopnost spletne trgovine po ZDPSI, kaj o vaši ponudbi odgovorijo AI asistenti (ChatGPT, Perplexity in drugi) ter ali lahko vaše izdelke preberejo AI asistenti in nakupni agenti. Povzetek je brezplačen.">
+<link rel="alternate" hreflang="sl" href="https://rtdsolutions.si/pripravljeni-na-ai.html">
+<link rel="alternate" hreflang="en" href="https://rtdsolutions.si/ai-visibility.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%2317365d%22/%3E%3Cpath%20d%3D%22M9%2022V10h6.5a3.8%203.8%200%20010%207.6H9m6.5%200L21%2022%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22/%3E%3Ccircle%20cx%3D%2223.5%22%20cy%3D%2210.5%22%20r%3D%222%22%20fill%3D%22%23e0893a%22/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero.slim { padding: 52px 0 56px; }
+.hero.slim h1 { font-size: clamp(28px, 4.2vw, 46px); max-width: 22ch; }
+.req-form { border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 22px; box-shadow: var(--shadow); }
+.req-form h2 { font-size: 20px; margin: 0 0 14px; }
+.field { margin: 0 0 14px; }
+.field label { display: block; font-weight: 600; color: var(--ink); font-size: 15px; margin: 0 0 6px; }
+.field input { width: 100%; font: inherit; font-size: 16px; padding: 11px 12px; border: 1px solid #b9c3d0; border-radius: 10px; color: var(--ink); background: #fff; }
+.field .help { font-size: 14px; color: var(--muted); margin: 6px 0 0; }
+.err { color: #b42318; font-size: 14px; margin: 6px 0 0; }
+button.btn { font: inherit; font-weight: 600; cursor: pointer; width: 100%; justify-content: center; }
+.small { font-size: 14px; color: var(--muted); }
+.prices { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .prices { grid-template-columns: 1fr; } }
+.card h3 { margin-top: 0; }
+.price { font-size: 28px; font-weight: 800; color: var(--ink); margin: 0 0 8px; }
+.price small { font-size: 15px; font-weight: 500; color: var(--muted); }
+.faq h3 { font-size: 18px; margin: 22px 0 6px; } .faq p { margin: 0; max-width: 75ch; }
+.bar .lang { margin-left: auto; }
+.also { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 8px 0 0; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Spletna trgovina, pripravljena na AI in dostopna",
+  "serviceType": "Pregled dostopnosti (ZDPSI, WCAG 2.2 AA), vidnosti v AI asistentih in pripravljenosti podatkov o izdelkih",
+  "description": "En pregled in eno poročilo: dostopnost po ZDPSI, odgovori ChatGPT in Perplexity na vprašanja kupcev ter podatki o izdelkih, ki jih berejo AI asistenti in nakupni agenti.",
+  "url": "https://rtdsolutions.si/pripravljeni-na-ai.html",
+  "areaServed": {"@type": "Country", "name": "Slovenija"},
+  "availableLanguage": ["sl", "en"],
+  "provider": {"@type": "Organization", "name": "RTD Solutions", "url": "https://rtdsolutions.si/", "email": "info@rtdsolutions.si"},
+  "offers": [
+    {"@type": "Offer", "name": "Povzetek", "price": "0", "priceCurrency": "EUR"},
+    {"@type": "Offer", "name": "Celoten pregled", "price": "390", "priceCurrency": "EUR", "valueAddedTaxIncluded": false},
+    {"@type": "Offer", "name": "Mesečno spremljanje", "priceCurrency": "EUR", "valueAddedTaxIncluded": false,
+     "priceSpecification": {"@type": "UnitPriceSpecification", "price": "39", "priceCurrency": "EUR", "unitCode": "MON", "valueAddedTaxIncluded": false}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Zakaj vse v enem pregledu?", "acceptedAnswer": {"@type": "Answer", "text": "Ker gre za iste strani in istega razvijalca. Številni popravki dostopnosti, na primer opisi slik, pravilni naslovi in besedilo namesto slik z besedilom, hkrati pomagajo, da vašo trgovino bolje razumejo tudi AI asistenti."}},
+    {"@type": "Question", "name": "Ali ponujate vtičnik, ki trgovino takoj uskladi?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Vtičniki z obljubo takojšnje skladnosti (overlay) težav v kodi ne odpravijo in jih uporabniki bralnikov zaslona pogosto težje uporabljajo. Pokažemo, kaj popraviti v kodi."}},
+    {"@type": "Question", "name": "Ali lahko kupci že kupujejo prek ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "V Sloveniji še ne neposredno. Programi, ki AI agentom dovolijo nakup v trgovini, so začeli v ZDA in v EU prihajajo postopoma. Danes je delujoča pot urejen vir izdelkov in strukturirani podatki, ker jih asistenti že berejo. Ko se programi odprejo v EU, bo trgovina z urejenimi podatki pripravljena med prvimi."}},
+    {"@type": "Question", "name": "Ali lahko zagotovite skladnost ali mesto v odgovorih ChatGPT?", "acceptedAnswer": {"@type": "Answer", "text": "Ne. Samodejni pregled ne zazna vseh težav z dostopnostjo, odgovori asistentov pa se spreminjajo. Pokažemo, kje ste in kaj popraviti najprej. Celoten pregled pred pošiljanjem preveri človek."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Preskoči na vsebino</a>
+<header class="top">
+  <div class="wrap bar">
+    <a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+    <a class="lang" href="ai-visibility.html" lang="en" hreflang="en">English</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero slim">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">ZDPSI · vidnost v AI · nakupni agenti</p>
+      <h1>Je vaša trgovina pripravljena na kupce, ki vprašajo AI?</h1>
+      <p class="lead">En pregled pokrije tri stvari, ki jih spletna trgovina danes potrebuje: dostopnost, ki jo
+        zahteva zakon, vidnost v odgovorih ChatGPT in Perplexity ter podatke o izdelkih, ki jih AI asistenti in
+        nakupni agenti lahko preberejo. Povzetek je brezplačen.</p>
+      <p class="small">Zakon o dostopnosti (ZDPSI) velja od 28. 6. 2025 za spletne trgovine vseh podjetij razen
+        mikro podjetij (manj kot 10 zaposlenih in letni promet ali bilančna vsota do 2 milijona EUR).</p>
+    </div>
+    <form class="req-form" id="f" novalidate>
+      <h2>Zahtevajte brezplačen povzetek</h2>
+      <div class="field">
+        <label for="url">Naslov spletne trgovine</label>
+        <input id="url" name="url" type="url" inputmode="url" autocomplete="url" placeholder="https://www.vasa-trgovina.si" required aria-describedby="url-help url-err">
+        <p class="help" id="url-help">Pregledamo domačo stran, stran izdelka, košarico in kontakt.</p>
+        <p class="err" id="url-err" aria-live="polite"></p>
+      </div>
+      <div class="field">
+        <label for="co">Podjetje <span class="small">(neobvezno)</span></label>
+        <input id="co" name="co" type="text" autocomplete="organization">
+      </div>
+      <button class="btn" type="submit">Pripravi e-sporočilo z zahtevo</button>
+      <p class="small" style="margin:10px 0 0">Gumb odpre vaš e-poštni program s pripravljenim sporočilom na
+        info@rtdsolutions.si. Povzetek pošljemo v 3 delovnih dneh na naslov, s katerega pišete. Vaših podatkov
+        ne uporabimo za nič drugega. En brezplačen povzetek na podjetje; zahteve obdelamo po vrstnem redu
+        prejema.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Kaj pregledamo</h2>
+    <div class="prices">
+      <div class="card"><h3>1. Dostopnost (ZDPSI)</h3>
+        <p>Samodejni pregled ključnih strani po WCAG 2.2 AA in ročni preizkus nakupa s tipkovnico. Seznam napak po
+          resnosti s popravki v kodi in osnutek izjave o dostopnosti.</p></div>
+      <div class="card"><h3>2. Vidnost v AI</h3>
+        <p>Kaj AI asistenti (ChatGPT, Perplexity in drugi) odgovorijo na vprašanja vaših kupcev, katere trgovine
+          imenujejo in na katere vire se opirajo.</p></div>
+      <div class="card"><h3>3. Podatki za agente</h3>
+        <p>Ali AI pajki smejo brati vašo trgovino, ali imajo izdelki strukturirane podatke (cena, zaloga, dostava)
+          in ali je vir izdelkov za Google Merchant Center urejen. Ta vir Google uporablja za nakupovalne
+          zadetke, tudi v odgovorih z umetno inteligenco.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="cena">
+  <div class="wrap">
+    <h2>Kaj dobite</h2>
+    <div class="prices">
+      <div class="card">
+        <h3>Povzetek</h3>
+        <p class="price">0 EUR</p>
+        <p>Najresnejše težave z dostopnostjo, odgovori asistentov na 3 vprašanja vaših kupcev in stanje podatkov o
+          izdelkih. Na eni strani, v 3 delovnih dneh.</p>
+      </div>
+      <div class="card">
+        <h3>Celoten pregled</h3>
+        <p class="price">390 EUR <small>+ DDV</small></p>
+        <p>Celoten pregled dostopnosti z ročnim preizkusom nakupa in osnutkom izjave o dostopnosti, meritev
+          vidnosti v AI za 20 vprašanj in seznam popravkov za podatke o izdelkih. Ločeno bi stalo 440 EUR.</p>
+      </div>
+      <div class="card">
+        <h3>Mesečno spremljanje</h3>
+        <p class="price">39 EUR <small>+ DDV na mesec</small></p>
+        <p>Vsak mesec ponovni pregled dostopnosti in meritev vidnosti, seznam novih in odpravljenih težav ter
+          posodobljena izjava o dostopnosti. Brez vezave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="wrap">
+    <h2>Vprašanja</h2>
+    <h3>Zakaj vse v enem pregledu?</h3>
+    <p>Ker gre za iste strani in istega razvijalca. Številni popravki dostopnosti, na primer opisi slik, pravilni
+      naslovi in besedilo namesto slik z besedilom, hkrati pomagajo, da vašo trgovino bolje razumejo tudi AI
+      asistenti.</p>
+    <h3>Ali ponujate vtičnik, ki trgovino takoj uskladi?</h3>
+    <p>Ne. Vtičniki z obljubo takojšnje skladnosti (overlay) težav v kodi ne odpravijo in jih uporabniki bralnikov
+      zaslona pogosto težje uporabljajo. Pokažemo, kaj popraviti v kodi.</p>
+    <h3>Ali lahko kupci že kupujejo prek ChatGPT?</h3>
+    <p>V Sloveniji še ne neposredno. Programi, ki AI agentom dovolijo nakup v trgovini, so začeli v ZDA in v EU
+      prihajajo postopoma. Danes je delujoča pot urejen vir izdelkov in strukturirani podatki, ker jih asistenti
+      že berejo. Ko se programi odprejo v EU, bo trgovina z urejenimi podatki pripravljena med prvimi.</p>
+    <h3>Ali lahko zagotovite skladnost ali mesto v odgovorih ChatGPT?</h3>
+    <p>Ne. Samodejni pregled ne zazna vseh težav z dostopnostjo, odgovori asistentov pa se spreminjajo. Pokažemo,
+      kje ste in kaj popraviti najprej. Celoten pregled pred pošiljanjem preveri človek.</p>
+    <p class="also"><a href="ai-vidnost.html">Nimate trgovine? Pregled vidnosti v AI za vsa podjetja →</a></p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><a class="logo" href="./"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#17365d"/><path d="M9 22V10h6.5a3.8 3.8 0 010 7.6H9m6.5 0L21 22" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="23.5" cy="10.5" r="2" fill="#e0893a"/></svg><span>RTD <b>Solutions</b></span></a>
+      <p>Vidnost v AI, dostopnost spletnih trgovin, skladnost strojev.</p></div>
+    <div><p><a href="mailto:info@rtdsolutions.si">info@rtdsolutions.si</a></p>
+      <p><a href="ai-visibility.html" lang="en">English</a></p></div>
+  </div>
+</footer>
+
+<script>
+const f = document.getElementById("f"), url = document.getElementById("url"), err = document.getElementById("url-err");
+f.addEventListener("submit", e => {
+  e.preventDefault();
+  let v = url.value.trim();
+  if (v && !/^https?:\/\//i.test(v)) v = "https://" + v;
+  let host = "";
+  try { host = new URL(v).hostname; } catch (_) {}
+  if (!host || !host.includes(".")) { err.textContent = "Vpišite naslov trgovine, na primer https://www.vasa-trgovina.si"; url.setAttribute("aria-invalid", "true"); url.focus(); return; }
+  err.textContent = ""; url.removeAttribute("aria-invalid");
+  const co = document.getElementById("co").value.trim();
+  const body = `Pozdravljeni,\n\nprosim za brezplačen povzetek (dostopnost, vidnost v AI, podatki o izdelkih) za trgovino:\n${v}\n` + (co ? `\nPodjetje: ${co}\n` : "");
+  location.href = `mailto:info@rtdsolutions.si?subject=${encodeURIComponent("Pripravljeni na AI: " + host)}&body=${encodeURIComponent(body)}`;
+});
+</script>
+</body>
+</html>
