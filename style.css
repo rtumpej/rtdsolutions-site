@@ -122,6 +122,27 @@ h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.2; margin: 0 0 10px; }
 .steps h3 { font-size: 18px; margin: 0 0 4px; }
 .steps p { margin: 0; font-size: 15px; }
 
+/* Hero steps (AI pages) */
+.hero .steps { grid-template-columns: 1fr; gap: 10px; padding: 0; margin: 4px 0 22px; max-width: 60ch; counter-reset: s; }
+.hero .steps li { display: block; position: relative; margin: 0; padding: 13px 16px 13px 60px; font-size: 16px;
+  counter-increment: s; border-left: 4px solid var(--c, var(--navy)); box-shadow: var(--shadow); }
+.hero .steps li::before { content: counter(s); position: absolute; left: 16px; top: 12px; width: 30px; height: 30px;
+  border-radius: 50%; display: grid; place-items: center; font-weight: 800; font-size: 15px; color: #fff;
+  background: var(--c, var(--navy)); }
+.hero .steps li:nth-child(3n+1) { --c: var(--navy); }
+.hero .steps li:nth-child(3n+2) { --c: #0f766e; }
+.hero .steps li:nth-child(3n) { --c: #9a4a0c; }
+.hero .steps b { color: var(--ink); }
+/* Assistant chips: a small dot in each assistant's own colour (names only, no logos). */
+.ais li { display: inline-flex; align-items: center; gap: 7px; }
+.ais li::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--c, var(--muted)); flex: none; }
+/* Light colour accents on the AI pages' cards. */
+.grid2 > .card { border-top: 3px solid var(--c, var(--navy)); }
+.grid2 > .card:nth-child(4n+2) { --c: #0f766e; }
+.grid2 > .card:nth-child(4n+3) { --c: var(--accent); }
+.grid2 > .card:nth-child(4n) { --c: #6d4bb8; }
+.prices > .card:nth-child(2) { border-top: 3px solid var(--accent); }
+
 .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; margin-top: 28px; }
 @media (max-width: 760px) { .principles { grid-template-columns: 1fr; } }
 .principle { display: flex; gap: 16px; }
