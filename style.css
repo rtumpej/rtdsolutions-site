@@ -96,6 +96,7 @@ h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.2; margin: 0 0 10px; }
 .muted { color: var(--muted); }
 
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.cards-4 { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 960px) { .cards { grid-template-columns: 1fr; } }
 .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px;
   display: flex; flex-direction: column; box-shadow: var(--shadow); transition: transform .15s, box-shadow .15s; }
@@ -170,3 +171,4 @@ sup a { text-decoration: none; }
 .foot { border-top: 1px solid var(--line); padding: 32px 0; font-size: 15px; color: var(--muted); background: var(--soft); }
 .foot-grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; }
 .foot p { margin: 8px 0 0; }
+.foot .legal { flex-basis: 100%; max-width: 90ch; margin: 4px 0 0; font-size: 13px; line-height: 1.5; }
