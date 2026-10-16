@@ -101,10 +101,10 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
     <p class="eyebrow">Maschinenverordnung (EU) 2023/1230 · gilt ab 20. Januar 2027</p>
     <h1>Was ändert die neue Maschinenverordnung für Ihre Maschine?</h1>
     <p class="lead">15 Fragen, danach sofort eine Lückenliste mit Verweisen auf die Artikel der Verordnung und Hinweisen,
-      was zu tun ist. Ohne Registrierung: Ihre Antworten bleiben in Ihrem Browser und werden nirgendwohin gesendet.</p>
+      was zu tun ist. Ohne Registrierung: Ihre Antworten bleiben in Ihrem Browser und erreichen uns nur, wenn Sie uns ein Formular senden (Paketreservierung oder Prüfungsanfrage).</p>
     <ul class="meta">
       <li class="pill">ca. 3 Minuten</li>
-      <li class="pill">keine Übergangsfrist</li>
+      <li class="pill">für Maschinen, die ab 20.1.2027 in Verkehr gebracht werden</li>
       <li class="pill">Text geprüft auf EUR-Lex</li>
     </ul>
   </div>
@@ -136,7 +136,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
           <p>Für Unternehmen, die ihre Dokumentation selbst aktualisieren: Checkliste für die Lückenanalyse, Struktur
             der aktualisierten Risikobeurteilung, Vorlage der EU-Konformitätserklärung nach der neuen Verordnung,
             Checkliste für digitale Betriebsanleitungen sowie Textbausteine zu Cybersicherheit und zur Protokollierung
-            von Eingriffen. Erstellt von einem Maschinenbauingenieur. Erhältlich auf Deutsch und Englisch (sowie
+            von Eingriffen. Vor der Veröffentlichung prüft ein Maschinenbauingenieur das Paket. Erhältlich auf Deutsch und Englisch (sowie
             Slowenisch).</p>
           <p class="note">Das Paket ist voraussichtlich bis zum 16. November 2026 fertig. Die Reservierung ist
             unverbindlich und ohne Zahlung; den Preis bestätigen wir bei Erscheinen.</p>
@@ -146,7 +146,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
           <h3>Prüfung der Dokumentation einer Maschine</h3>
           <p class="price">290 EUR <small>zzgl. MwSt.</small></p>
           <p>Sie senden uns die technischen Unterlagen einer Maschine auf Englisch. Innerhalb von 5 Arbeitstagen
-            erhalten Sie eine Lückenliste mit Einstufung nach Dringlichkeit, Lösungsvorschlägen und Textentwürfen für
+            erhalten Sie eine Lückenliste mit Einstufung nach Schweregrad, Lösungsvorschlägen und Textentwürfen für
             schnelle Korrekturen, auf Englisch. Jede Prüfung bestätigt ein Maschinenbauingenieur. Unterlagen auf
             Deutsch prüfen wir auf Anfrage.</p>
           <p class="note">Wir führen keine Konformitätsbewertung durch; die Konformitätserklärung unterzeichnet der
@@ -171,7 +171,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
         </div>
         <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button class="btn" type="submit">Anfrage senden</button>
-        <p class="small" style="margin:10px 0 0">Ihre Anfrage kommt direkt zu uns, mit dem Ergebnis Ihres Selbstchecks. Unverbindlich und ohne Zahlung; wir antworten innerhalb von 2 Werktagen. Das Formular wird über den Dienst FormSubmit übermittelt.</p>
+        <p class="small" style="margin:10px 0 0">Ihre Anfrage kommt direkt zu uns, mit dem Ergebnis Ihres Selbstchecks. Unverbindlich und ohne Zahlung; wir antworten innerhalb von 2 Arbeitstagen. Das Formular wird über den Dienst FormSubmit übermittelt.</p>
       </form>
     </div>
   </div>
@@ -183,9 +183,8 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
     <p>Der Selbstcheck hilft bei der Vorbereitung. Er ist keine Konformitätsbewertung und keine Rechtsberatung. Für
       die Konformität der Maschine ist der Hersteller verantwortlich. Die Verweise beziehen sich auf die Verordnung
       (EU) 2023/1230 in der auf EUR-Lex veröffentlichten Fassung, mit dem Geltungsbeginn laut Berichtigung vom Juli 2023
-      (20. Januar 2027). Maschinen, die vor diesem Datum nach der Richtlinie 2006/42/EG in Verkehr gebracht wurden,
-      bleiben konform, solange niemand sie wesentlich verändert.</p>
-    <p>Bei der Erstellung unserer Inhalte nutzen wir KI-Werkzeuge; die Inhalte hat ein Maschinenbauingenieur geprüft.</p>
+      (20. Januar 2027). Maschinen, die vor diesem Datum nach der Richtlinie 2006/42/EG in Verkehr gebracht wurden, dürfen weiter auf dem Markt bereitgestellt werden (Art. 52); für eine Maschine, die ab diesem Datum wesentlich verändert wird, gilt die Verordnung.</p>
+    <p>Bei der Erstellung unserer Inhalte nutzen wir KI-Werkzeuge; die Inhalte prüfen wir anhand des amtlichen Verordnungstextes auf EUR-Lex.</p>
   </div>
 </section>
 </main>
@@ -207,9 +206,9 @@ const EMAIL = "info@rtdsolutions.si";
 const Q = [
   { id: "market", g: "Gilt die Verordnung für Sie",
     t: "Werden Sie ab dem 20. Januar 2027 neue Maschinen, dazugehörige Produkte oder unvollständige Maschinen in Verkehr bringen oder in Betrieb nehmen?",
-    gap: a => a === "no" ? [{ s: 0, h: "Für Maschinen, die vor dem 20. Januar 2027 in Verkehr gebracht werden, gilt noch die Richtlinie",
-      p: "Maschinen, die Sie bis zum 19. Januar 2027 nach der Richtlinie 2006/42/EG in Verkehr bringen, bleiben konform. Die Verordnung betrifft Sie, sobald Sie eine Maschine wesentlich verändern oder ab dem 20. Januar 2027 eine Maschine in Verkehr bringen.",
-      r: "Art. 52 Abs. 1 und Art. 54 (Daten laut Berichtigung vom Juli 2023)" }] : [] },
+    gap: a => a === "no" ? [{ s: 0, h: "Maschinen, die vor dem 20. Januar 2027 nach der Richtlinie in Verkehr gebracht wurden, dürfen weiter bereitgestellt werden",
+      p: "Maschinen, die Sie bis zum 19. Januar 2027 nach der Richtlinie 2006/42/EG in Verkehr bringen, dürfen weiter auf dem Markt bereitgestellt werden. Die Verordnung betrifft Sie, sobald Sie ab dem 20. Januar 2027 eine Maschine in Verkehr bringen oder wesentlich verändern.",
+      r: "Art. 52 Abs. 1 und Art. 54 (Termine laut Berichtigung vom Juli 2023)" }] : [] },
   { id: "partA", g: "Maschinenkategorie",
     t: "Ist Ihr Produkt in Anhang I Teil A aufgeführt?",
     h: "Abnehmbare Gelenkwellen und ihre trennenden Schutzeinrichtungen, Hebebühnen für Fahrzeuge, tragbare Befestigungsgeräte mit Treibladung und andere Schussgeräte sowie Sicherheitsbauteile oder Maschinen, deren Sicherheitsfunktionen durch Systeme mit selbstentwickelndem Verhalten (maschinelles Lernen) gewährleistet werden.",
@@ -241,14 +240,14 @@ const Q = [
   { id: "ml", g: "Software und Vernetzung",
     t: "Nutzt die Maschine maschinelles Lernen oder ein anderes selbstentwickelndes Verhalten, das Bewegungen oder die Sicherheit beeinflusst?",
     gap: a => a !== "no" ? [{ s: 1, h: "Besondere Anforderungen an autonomes und selbstentwickelndes Verhalten",
-      p: "Die Maschine darf keine Handlungen ausführen, die über ihre festgelegte Aufgabe und ihren festgelegten Bewegungsbereich hinausgehen; Daten über sicherheitsrelevante Entscheidungen der Software sind ein Jahr lang aufzubewahren; die Maschine muss jederzeit korrigiert werden können. Die Schnittstelle muss an die Bediener angepasst sein, und die Maschine muss geplante Handlungen verständlich mitteilen. Gewährleistet ein solches System eine Sicherheitsfunktion, fällt es unter Anhang I Teil A (notifizierte Stelle).",
+      p: "Die Maschine darf keine Handlungen ausführen, die über ihre festgelegte Aufgabe und ihren festgelegten Bewegungsbereich hinausgehen; Daten über sicherheitsrelevante Entscheidungen der Software sind ein Jahr lang aufzubewahren; die Maschine muss jederzeit korrigiert werden können. Die Schnittstelle muss an die Bediener angepasst sein, und die Maschine muss gegebenenfalls geplante Handlungen verständlich mitteilen. Gewährleistet ein solches System eine Sicherheitsfunktion, fällt es unter Anhang I Teil A (notifizierte Stelle).",
       r: "Anhang III Abschnitte 1.2.1 und 1.1.6 Buchstaben f und g; Anhang I Teil A Nummern 5 und 6" }] : [] },
   { id: "dig", g: "Betriebsanleitung und Dokumente",
     t: "Werden Sie die Betriebsanleitung in digitaler Form bereitstellen (PDF, Website, QR-Code)?",
     gap: a => a === "yes" ? [{ s: 2, h: "Bedingungen für digitale Betriebsanleitungen", demo: true,
-      p: "Geben Sie auf der Maschine (oder auf der Verpackung oder in einem Begleitdokument) an, wie die Anleitung abgerufen werden kann. Nutzer müssen sie ausdrucken, herunterladen und speichern können, damit sie jederzeit verfügbar ist, auch bei einem Ausfall der Maschine. Sie muss während der voraussichtlichen Lebensdauer der Maschine und mindestens zehn Jahre nach dem Inverkehrbringen online zugänglich sein. Verlangt der Käufer beim Kauf eine Papierfassung, erhält er sie innerhalb eines Monats kostenlos.",
+      p: "Geben Sie auf der Maschine (oder, falls dies nicht möglich ist, auf der Verpackung oder in einem Begleitdokument) an, wie die Anleitung abgerufen werden kann. Nutzer müssen sie ausdrucken, herunterladen und speichern können, damit sie jederzeit verfügbar ist, auch bei einem Ausfall der Maschine. Sie muss während der voraussichtlichen Lebensdauer der Maschine und mindestens zehn Jahre nach dem Inverkehrbringen online zugänglich sein. Verlangt der Käufer beim Kauf eine Papierfassung, erhält er sie innerhalb eines Monats kostenlos.",
       r: "Art. 10 Abs. 7" }] : a === "unsure" ? [{ s: 0, h: "Digitale Betriebsanleitungen sind erlaubt, unter Bedingungen", demo: true,
-      p: "Ab dem 20. Januar 2027 dürfen Sie die Betriebsanleitung digital bereitstellen, wenn sie über eine Angabe auf der Maschine auffindbar ist, ausgedruckt und gespeichert werden kann und mindestens zehn Jahre online bleibt. Das spart den Druck übersetzter Anleitungen auf Papier.",
+      p: "Ab dem 20. Januar 2027 dürfen Sie die Betriebsanleitung digital bereitstellen, wenn sie unter anderem über eine Angabe auf der Maschine auffindbar ist, ausgedruckt, heruntergeladen und gespeichert werden kann und während der voraussichtlichen Lebensdauer der Maschine und mindestens zehn Jahre nach dem Inverkehrbringen online bleibt. Das spart den Großteil der Druckkosten; eine kostenlose Papierfassung, wenn der Käufer sie beim Kauf verlangt, und die Sicherheitsinformationen in Papierform für nichtprofessionelle Nutzer stellen Sie weiterhin bereit.",
       r: "Art. 10 Abs. 7" }] : [] },
   { id: "lay", g: "Betriebsanleitung und Dokumente",
     t: "Könnten auch nichtprofessionelle Nutzer Ihre Maschine unter vernünftigerweise vorhersehbaren Umständen verwenden, auch wenn sie nicht für sie bestimmt ist?",
@@ -257,8 +256,8 @@ const Q = [
       r: "Art. 10 Abs. 7" }] : [] },
   { id: "doc", g: "Betriebsanleitung und Dokumente",
     t: "Wird die EU-Konformitätserklärung über eine Internetadresse oder einen QR-Code abrufbar sein, statt als Exemplar beizuliegen?",
-    gap: a => a === "yes" ? [{ s: 3, h: "Digitale Konformitätserklärung: zehn Jahre online",
-      p: "Geben Sie die Internetadresse oder den maschinenlesbaren Code in der Betriebsanleitung und in den Informationen nach Anhang III an. Die digitale Erklärung muss während der erwarteten Lebensdauer der Maschine und in jedem Fall mindestens zehn Jahre nach dem Inverkehrbringen online verfügbar sein.",
+    gap: a => a === "yes" ? [{ s: 3, h: "Digitale Konformitätserklärung: online während der erwarteten Lebensdauer und mindestens zehn Jahre",
+      p: "Geben Sie die Internetadresse oder den maschinenlesbaren Code in der Betriebsanleitung und in den Informationen nach Anhang III an. Die digitale Erklärung muss während der erwarteten Lebensdauer der Maschine und in jedem Fall mindestens zehn Jahre nach dem Inverkehrbringen oder der Inbetriebnahme online verfügbar sein.",
       r: "Art. 10 Abs. 8" }] : [] },
   { id: "contact", g: "Betriebsanleitung und Dokumente",
     t: "Geben Sie auf der Maschine neben Namen und Postanschrift auch eine Website, E-Mail-Adresse oder einen anderen digitalen Kontakt an?",
@@ -268,11 +267,11 @@ const Q = [
   { id: "mod", g: "Ihre Rolle",
     t: "Bauen Sie bestehende Maschinen um, rüsten Sie sie nach oder verketten Sie sie (Retrofit, Anlagen), auch nur durch eine Änderung der Software?",
     gap: a => a !== "no" ? [{ s: 2, h: "Eine wesentliche Veränderung macht Sie zum Hersteller",
-      p: "Eine vom Hersteller nicht vorgesehene physische oder digitale Veränderung, durch die eine neue Gefährdung entsteht oder sich ein bestehendes Risiko erhöht, ist eine wesentliche Veränderung. Wer sie vornimmt, hat für die veränderte Maschine die Pflichten des Herstellers: Konformitätsbewertung, EU-Konformitätserklärung, CE-Kennzeichnung. Legen Sie fest, wann Ihre Projekte diese Grenze überschreiten, und halten Sie das in der Risikobeurteilung fest.",
+      p: "Eine wesentliche Veränderung ist eine vom Hersteller nicht vorgesehene oder geplante physische oder digitale Veränderung nach dem Inverkehrbringen oder der Inbetriebnahme, durch die eine neue Gefährdung entsteht oder sich ein bestehendes Risiko erhöht und die es erforderlich macht, die Maschine um trennende oder nichttrennende Schutzeinrichtungen zu ergänzen, deren Einbindung eine Anpassung des bestehenden Sicherheitssteuerungssystems erfordert, oder zusätzliche Schutzmaßnahmen zur Gewährleistung der Stabilität oder der Festigkeit zu ergreifen. Wer sie vornimmt, hat für die veränderte Maschine die Pflichten des Herstellers: Konformitätsbewertung, EU-Konformitätserklärung, CE-Kennzeichnung. Legen Sie fest, wann Ihre Projekte diese Grenze überschreiten, und halten Sie das in der Risikobeurteilung fest.",
       r: "Art. 3 Nr. 16 und Art. 18" }] : [] },
   { id: "partly", g: "Ihre Rolle",
     t: "Liefern Sie unvollständige Maschinen zum Einbau in andere Maschinen?",
-    gap: a => a !== "no" ? [{ s: 3, h: "Unvollständige Maschinen: neue Regeln",
+    gap: a => a !== "no" ? [{ s: 3, h: "Unvollständige Maschinen: Pflichten nach der Verordnung",
       p: "Unvollständige Maschinen müssen die einschlägigen grundlegenden Anforderungen erfüllen. Sie brauchen technische Unterlagen nach Anhang IV Teil B, eine EU-Einbauerklärung und eine Montageanleitung. Bewahren Sie die Unterlagen mindestens zehn Jahre auf; auf begründetes Verlangen stellen Sie der Behörde den Quellcode oder die Programmierlogik zur Verfügung.",
       r: "Art. 11 und 22; Anhang IV Teil B; Anhang XI" }] : [] },
   { id: "import", g: "Ihre Rolle",
@@ -281,14 +280,14 @@ const Q = [
       p: "Der Einführer muss sicherstellen, dass der Hersteller die Konformitätsbewertung durchgeführt und die Unterlagen erstellt hat. Wer eine Maschine unter eigenem Namen oder eigener Marke in Verkehr bringt oder sie so verändert, dass die Konformität beeinträchtigt werden kann, hat die Pflichten des Herstellers.",
       r: "Art. 13 und 17" }] : [] },
   { id: "techdoc", g: "Dokumentation",
-    t: "Haben Sie für jede Maschine technische Unterlagen mit einer Risikobeurteilung, die auf die neuen grundlegenden Anforderungen aktualisiert ist (Cybersicherheit, Autonomie, psychische Belastung der Bediener)?",
+    t: "Haben Sie für jede Maschine technische Unterlagen mit einer Risikobeurteilung, die auf die neuen grundlegenden Anforderungen aktualisiert ist (Cybersicherheit, Sicherheitssoftware, selbstentwickelndes Verhalten)?",
     gap: a => a !== "yes" ? [{ s: 2, h: "Risikobeurteilung und technische Unterlagen aktualisieren",
-      p: "Die technischen Unterlagen nach Anhang IV Teil A müssen die neuen grundlegenden Anforderungen aus Anhang III abdecken. Die Risikobeurteilung muss auch den Schutz der Software gegen Korrumpierung und die psychische Belastung der Bediener erfassen. Bewahren Sie die Unterlagen und die Erklärung mindestens zehn Jahre nach dem Inverkehrbringen auf.",
+      p: "Die technischen Unterlagen nach Anhang IV Teil A müssen die neuen grundlegenden Anforderungen aus Anhang III abdecken. Die Risikobeurteilung muss auch den Schutz von Software und Daten gegen unbeabsichtigte oder vorsätzliche Korrumpierung (1.1.9) und die Sicherheit der Steuerung gegen vernünftigerweise vorhersehbare böswillige Versuche Dritter (1.2.1) erfassen; für Maschinen mit selbstentwickelndem Verhalten gilt zusätzlich der erweiterte Buchstabe f von 1.1.6 und gegebenenfalls Buchstabe g. Bewahren Sie die Unterlagen und die Erklärung mindestens zehn Jahre nach dem Inverkehrbringen oder der Inbetriebnahme auf.",
       r: "Anhang IV Teil A; Anhang III Abschnitte 1.1.6, 1.1.9, 1.2.1; Art. 10 Abs. 3" }] : [] },
 ];
 const BASE = [{ s: 3, h: "Neue EU-Konformitätserklärung für jede Maschine",
-  p: "Jede Maschine, die ab dem 20. Januar 2027 in Verkehr gebracht wird, braucht eine EU-Konformitätserklärung nach Anhang V Teil A mit Verweis auf die Verordnung (EU) 2023/1230. Eine Übergangsfrist gibt es nicht.",
-  r: "Art. 21; Anhang V Teil A; Art. 54" }];
+  p: "Jede Maschine, die ab dem 20. Januar 2027 in Verkehr gebracht wird, braucht eine EU-Konformitätserklärung nach Anhang V Teil A mit Verweis auf die Verordnung (EU) 2023/1230. Maschinen, die vor diesem Tag nach der Richtlinie 2006/42/EG in Verkehr gebracht wurden, dürfen weiter auf dem Markt bereitgestellt werden.",
+  r: "Art. 21; Anhang V Teil A; Art. 52 und 54" }];
 const SEV = { 1: "Kritisch", 2: "Wichtig", 3: "Anzupassen", 0: "Information" };
 const ANS = [["yes", "Ja"], ["no", "Nein"], ["unsure", "Weiß nicht"]];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));

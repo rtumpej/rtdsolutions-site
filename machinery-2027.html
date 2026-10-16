@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>Machinery Regulation 2027: 3-minute self-check | RTD Solutions</title>
-<meta name="description" content="Free self-check: what Machinery Regulation (EU) 2023/1230, applying from 20 January 2027, changes for your machine. 15 questions, a gap list with article references, no sign-up.">
+<meta name="description" content="Free self-check: what the Machinery Regulation (EU) 2023/1230, applying from 20 January 2027, changes for your machine. 15 questions, a gap list with article references, no sign-up.">
 <link rel="alternate" hreflang="en" href="https://rtdsolutions.si/machinery-2027.html">
 <link rel="alternate" hreflang="de" href="https://rtdsolutions.si/maschinen-2027.html">
 <link rel="alternate" hreflang="sl" href="https://rtdsolutions.si/stroji-2027.html">
@@ -101,10 +101,10 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
     <p class="eyebrow">Regulation (EU) 2023/1230 · applies from 20 January 2027</p>
     <h1>What does the new Machinery Regulation change for your machine?</h1>
     <p class="lead">15 questions, then an instant gap list with references to the articles of the Regulation and what to do.
-      No sign-up: your answers stay in your browser and are not sent anywhere.</p>
+      No sign-up: your answers stay in your browser and reach us only if you send us a form (kit reservation or review request).</p>
     <ul class="meta">
       <li class="pill">about 3 minutes</li>
-      <li class="pill">no transition period</li>
+      <li class="pill">for machines placed on the market from 20 Jan 2027</li>
       <li class="pill">text checked on EUR-Lex</li>
     </ul>
   </div>
@@ -135,7 +135,7 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
           <p class="price">EUR 149 <small>excl. VAT</small></p>
           <p>For companies that update their documentation themselves: gap checklist, structure for the updated
             risk assessment, EU declaration of conformity template under the new Regulation, checklist for digital
-            instructions, and texts on cybersecurity and logging of interventions. Prepared by a mechanical engineer.
+            instructions, and texts on cybersecurity and logging of interventions. A mechanical engineer reviews the kit before release.
             Available in English and German (and Slovene).</p>
           <p class="note">The kit is expected to be ready by 16 November 2026. A reservation is not binding and
             involves no payment; we confirm the price at release.</p>
@@ -180,9 +180,8 @@ button.btn { font: inherit; font-weight: 600; cursor: pointer; }
     <h2>Important</h2>
     <p>The self-check helps you prepare. It is not a conformity assessment and not legal advice. The manufacturer is
       responsible for the conformity of the machine. References are to Regulation (EU) 2023/1230 as published on
-      EUR-Lex, with the date of application as corrected in July 2023 (20 January 2027). Machinery placed on the market
-      under Directive 2006/42/EC before that date remains compliant unless someone substantially modifies it.</p>
-    <p>We use AI tools to prepare our content; it has been checked by a mechanical engineer.</p>
+      EUR-Lex, with the date of application as corrected in July 2023 (20 January 2027). Machinery placed on the market under Directive 2006/42/EC before that date may still be made available on the market (Art. 52); a machine substantially modified from that date must comply with the Regulation.</p>
+    <p>We use AI tools to prepare our content; we check it against the official text of the Regulation on EUR-Lex.</p>
   </div>
 </section>
 </main>
@@ -204,8 +203,8 @@ const EMAIL = "info@rtdsolutions.si";
 const Q = [
   { id: "market", g: "Does the Regulation apply to you",
     t: "From 20 January 2027, will you place new machinery, related products or partly completed machinery on the market or put them into service?",
-    gap: a => a === "no" ? [{ s: 0, h: "Machinery placed on the market before 20 January 2027 stays under the Directive",
-      p: "Machinery you place on the market under Directive 2006/42/EC up to 19 January 2027 remains compliant. The Regulation concerns you as soon as you substantially modify a machine or place any machine on the market from 20 January 2027.",
+    gap: a => a === "no" ? [{ s: 0, h: "Machinery placed on the market under the Directive before 20 January 2027 may still be made available",
+      p: "Machinery you place on the market under Directive 2006/42/EC up to 19 January 2027 may still be made available on the market. The Regulation concerns you as soon as, from 20 January 2027, you place any machine on the market or substantially modify one.",
       r: "Articles 52(1) and 54 (dates as corrected in July 2023)" }] : [] },
   { id: "partA", g: "Machine category",
     t: "Is your product listed in Annex I, Part A?",
@@ -215,7 +214,7 @@ const Q = [
       r: "Article 25(2); Annex I, Part A" }] : [] },
   { id: "partB", g: "Machine category",
     t: "Is your product listed in Annex I, Part B?",
-    h: "For example circular saws and band saws for wood or meat, hand-fed planing machinery and thicknessers for wood, presses for the cold working of metals with manual loading, plastics or rubber injection or compression moulding machinery with manual loading, devices for lifting persons with a hazard of falling more than 3 m, protective devices designed to detect persons, logic units for safety functions, ROPS and FOPS.",
+    h: "For example circular saws and band saws for wood or meat, hand-fed planing machinery and thicknessers for wood, presses for the cold working of metals with manual loading, plastics or rubber injection or compression moulding machinery with manual loading, devices for lifting persons with a hazard of falling more than 3 m, protective devices designed to detect the presence of persons, logic units for safety functions, ROPS and FOPS.",
     gap: a => a !== "no" ? [{ s: 2, h: "Internal production control only with full use of standards",
       p: "Module A is allowed only if the machine is designed and built to harmonised standards or common specifications for that category that cover all relevant essential requirements. Otherwise you need a notified body. Check which standards are published under the new Regulation.",
       r: "Article 25(3); Annex I, Part B" }] : [] },
@@ -238,24 +237,24 @@ const Q = [
   { id: "ml", g: "Software and connectivity",
     t: "Does the machine use machine learning or other self-evolving behaviour that affects its movement or safety?",
     gap: a => a !== "no" ? [{ s: 1, h: "Specific requirements for autonomous and self-evolving behaviour",
-      p: "The machine must not perform actions beyond its defined task and movement space; data on the safety-related decisions of the software must be kept for one year; it must be possible to correct the machine at all times. The interface must be adapted to the operators, and the machine must communicate its planned actions in a comprehensible way. If such a system ensures a safety function, it falls under Annex I, Part A (notified body).",
+      p: "The machine must not perform actions beyond its defined task and movement space; data on the safety-related decisions of the software must be kept for one year; it must be possible to correct the machine at all times. The interface must be adapted to the operators, and the machine must, where relevant, communicate its planned actions in a comprehensible way. If such a system ensures a safety function, it falls under Annex I, Part A (notified body).",
       r: "Annex III, 1.2.1 and 1.1.6(f)(g); Annex I, Part A, points 5 and 6" }] : [] },
   { id: "dig", g: "Instructions and documents",
     t: "Will you provide the instructions for use in digital form (PDF, website, QR code)?",
     gap: a => a === "yes" ? [{ s: 2, h: "Conditions for digital instructions", demo: true,
-      p: "Mark on the machine (or on its packaging or in an accompanying document) how to access the instructions. Users must be able to print, download and save them, so that they can reach them at all times, including during a breakdown. They must be online for the expected lifetime of the machine and for at least 10 years after it is placed on the market. If the buyer asks for a paper copy at the time of purchase, they get it free of charge within one month.",
+      p: "Mark on the machine (or, where that is not possible, on its packaging or in an accompanying document) how to access the instructions. Users must be able to print, download and save them, so that they can reach them at all times, including during a breakdown. The instructions must be online for the expected lifetime of the machine and for at least 10 years after it is placed on the market. If the buyer asks for a paper copy at the time of purchase, they get it free of charge within one month.",
       r: "Article 10(7)" }] : a === "unsure" ? [{ s: 0, h: "Digital instructions are allowed, with conditions", demo: true,
-      p: "From 20 January 2027 you may provide the instructions digitally, if they can be reached via a marking on the machine, can be printed and saved, and stay online for at least 10 years. This saves printing translated manuals on paper.",
+      p: "From 20 January 2027 you may provide the instructions digitally, if, among other conditions, they can be reached via a marking on the machine, can be printed, downloaded and saved, and stay online for the machine's expected lifetime and at least 10 years after it is placed on the market. This saves most of the printing; you still provide a free paper copy if the buyer asks for one at purchase, and the safety information on paper for non-professional users.",
       r: "Article 10(7)" }] : [] },
   { id: "lay", g: "Instructions and documents",
     t: "Could non-professional users, under reasonably foreseeable conditions, use your machine, even if it is not intended for them?",
     gap: a => a !== "no" ? [{ s: 3, h: "Safety information on paper",
-      p: "You must provide the safety information that is essential for putting the machine into service and using it safely in paper form, even if the instructions are digital.",
+      p: "You must provide, in paper form, the safety information that is essential for putting the machine into service and using it safely, even if the instructions are digital.",
       r: "Article 10(7)" }] : [] },
   { id: "doc", g: "Instructions and documents",
     t: "Will the EU declaration of conformity be available via a web address or QR code instead of an enclosed copy?",
-    gap: a => a === "yes" ? [{ s: 3, h: "Digital declaration of conformity: online for 10 years",
-      p: "Give the web address or machine-readable code in the instructions for use and in the information required by Annex III. The digital declaration must be online for the expected lifetime of the machine and in any event for at least 10 years after it is placed on the market.",
+    gap: a => a === "yes" ? [{ s: 3, h: "Digital declaration of conformity: online for the machine's expected lifetime and at least 10 years",
+      p: "Give the web address or machine-readable code in the instructions for use and in the information required by Annex III. The digital declaration must be online for the expected lifetime of the machine and in any event for at least 10 years after it is placed on the market or put into service.",
       r: "Article 10(8)" }] : [] },
   { id: "contact", g: "Instructions and documents",
     t: "Besides your name and postal address, do you put a website, email address or other digital contact on the machine?",
@@ -265,11 +264,11 @@ const Q = [
   { id: "mod", g: "Your role",
     t: "Do you rebuild, upgrade or connect existing machines (retrofits, production lines), even only by changing software?",
     gap: a => a !== "no" ? [{ s: 2, h: "A substantial modification makes you the manufacturer",
-      p: "A physical or digital modification that the manufacturer did not foresee and that creates a new hazard or increases a risk is a substantial modification. Whoever carries it out has the manufacturer's obligations for the modified machine: conformity assessment, EU declaration of conformity, CE marking. Define when your projects cross this line and record it in the risk assessment.",
+      p: "A substantial modification is a physical or digital modification made after the machine has been placed on the market or put into service, not foreseen or planned by the manufacturer, that creates a new hazard or increases an existing risk and requires either adding guards or protective devices that need a change to the existing safety control system, or additional protective measures for stability or mechanical strength. Whoever carries it out has the manufacturer's obligations for the modified machine: conformity assessment, EU declaration of conformity, CE marking. Define when your projects cross this line and record it in the risk assessment.",
       r: "Article 3(16) and Article 18" }] : [] },
   { id: "partly", g: "Your role",
     t: "Do you supply partly completed machinery for incorporation into other machines?",
-    gap: a => a !== "no" ? [{ s: 3, h: "Partly completed machinery: new rules",
+    gap: a => a !== "no" ? [{ s: 3, h: "Partly completed machinery: obligations under the Regulation",
       p: "Partly completed machinery must meet the relevant essential requirements. You need technical documentation under Annex IV, Part B, an EU declaration of incorporation and assembly instructions. Keep the documentation for at least 10 years; on a reasoned request, give the authority the source code or programming logic.",
       r: "Articles 11 and 22; Annex IV, Part B; Annex XI" }] : [] },
   { id: "import", g: "Your role",
@@ -278,14 +277,14 @@ const Q = [
       p: "An importer must make sure that the manufacturer carried out the conformity assessment and drew up the documentation. Whoever places a machine on the market under their own name or trade mark, or modifies it in a way that may affect compliance, has the manufacturer's obligations.",
       r: "Articles 13 and 17" }] : [] },
   { id: "techdoc", g: "Documentation",
-    t: "Do you have technical documentation for each machine, with a risk assessment updated for the new essential requirements (cybersecurity, autonomy, psychological stress on the operator)?",
+    t: "Do you have technical documentation for each machine, with a risk assessment updated for the new essential requirements (cybersecurity, safety software, self-evolving behaviour)?",
     gap: a => a !== "yes" ? [{ s: 2, h: "Update the risk assessment and technical documentation",
-      p: "Technical documentation under Annex IV, Part A must cover the new essential requirements of Annex III. The risk assessment must also cover protection against corruption of software and the psychological stress on the operator. Keep the documentation and the declaration for at least 10 years after the machine is placed on the market.",
+      p: "Technical documentation under Annex IV, Part A must cover the new essential requirements of Annex III. The risk assessment must also cover protection of software and data against accidental or intentional corruption (1.1.9) and the safety of the control system against reasonably foreseeable malicious attempts by third parties (1.2.1); for machines with self-evolving behaviour, the extended point (f) of 1.1.6 also applies and, where relevant, point (g). Keep the documentation and the declaration for at least 10 years after the machine is placed on the market or put into service.",
       r: "Annex IV, Part A; Annex III, 1.1.6, 1.1.9, 1.2.1; Article 10(3)" }] : [] },
 ];
 const BASE = [{ s: 3, h: "A new EU declaration of conformity for every machine",
-  p: "Every machine placed on the market from 20 January 2027 needs an EU declaration of conformity under Annex V, Part A, referring to Regulation (EU) 2023/1230. There is no transition period.",
-  r: "Article 21; Annex V, Part A; Article 54" }];
+  p: "Every machine placed on the market from 20 January 2027 needs an EU declaration of conformity under Annex V, Part A, referring to Regulation (EU) 2023/1230. Machines placed on the market under Directive 2006/42/EC before that date may still be made available on the market (Art. 52).",
+  r: "Article 21; Annex V, Part A; Articles 52 and 54" }];
 const SEV = { 1: "Critical", 2: "Important", 3: "To align", 0: "Information" };
 const ANS = [["yes", "Yes"], ["no", "No"], ["unsure", "Not sure"]];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
