@@ -172,3 +172,18 @@ sup a { text-decoration: none; }
 .foot-grid { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-start; }
 .foot p { margin: 8px 0 0; }
 .foot .legal { flex-basis: 100%; max-width: 90ch; margin: 4px 0 0; font-size: 13px; line-height: 1.5; }
+
+/* Design pass 23 Oct 2026 (design lead; docs/brand/DESIGN_SYSTEM.md) */
+/* <button class="btn"> (forms) took the browser's 13 px system font; match the link buttons. */
+button.btn, input.btn { font: inherit; font-weight: 600; cursor: pointer; }
+/* Cards that open with a title (no icon) get no extra gap above it; title links get a calmer underline. */
+.card > h3:first-child { margin-top: 0; }
+.card h3 a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
+/* Phones: one full-width call to action per row instead of two ragged buttons; tighter section rhythm. */
+@media (max-width: 560px) {
+  .actions .btn { flex: 1 1 100%; justify-content: center; }
+  .section { padding: 56px 0; }
+  .hero { padding: 44px 0 52px; }
+  .sub { margin-bottom: 28px; }
+  .cta { padding: 52px 0; }
+}

@@ -29,6 +29,20 @@ table.hist { width: 100%; border-collapse: collapse; font-size: 15px; }
 table.hist th, table.hist td { text-align: left; padding: 9px 8px; border-top: 1px solid var(--line); vertical-align: top; }
 table.hist th { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; border-top: 0; }
 .tbl { overflow-x: auto; }
+/* Phones: each edition becomes a small block (four columns of 60-80px wrapped every word, design review 23 Oct). */
+@media (max-width: 560px) {
+  table.hist thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  table.hist, table.hist tbody, table.hist tr, table.hist td { display: block; }
+  table.hist tr { border-top: 1px solid var(--line); padding: 12px 0; }
+  table.hist tbody tr:first-child { border-top: 0; padding-top: 4px; }
+  table.hist td { border: 0; padding: 0; }
+  table.hist td:nth-child(1), table.hist td:nth-child(2) { display: inline; font-weight: 700; color: var(--ink); }
+  table.hist td:nth-child(1)::before { content: "Izdaja "; }
+  table.hist td:nth-child(2)::before { content: " · "; font-weight: 400; color: var(--muted); }
+  table.hist td:nth-child(3) { margin-top: 2px; font-size: 14px; color: var(--muted); }
+  table.hist td:nth-child(3)::before { content: "Serijske številke: "; }
+  table.hist td:nth-child(4) { margin-top: 4px; }
+}
 .safety ol { margin: 0; padding-left: 22px; } .safety li { margin-bottom: 6px; color: var(--ink); }
 .doc-dl { font-size: 15px; } .doc-dl p { margin: 4px 0; }
 .small { font-size: 14px; color: var(--muted); }
